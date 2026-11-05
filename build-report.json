@@ -1,0 +1,282 @@
+{
+  "site_url": "https://limpiezacanalonestejadosurgente.es",
+  "pages": 53,
+  "sitemap_pages": 51,
+  "principal_municipalities": 38,
+  "covered_municipalities": 934,
+  "provinces": {
+    "Álava": 51,
+    "Vizcaya": 113,
+    "Burgos": 371,
+    "Cantabria": 102,
+    "Guipúzcoa": 88,
+    "Segovia": 209
+  },
+  "routes": [
+    {
+      "path": "/",
+      "indexable": true,
+      "title": "Limpieza de tejados y canalones | Fuentes"
+    },
+    {
+      "path": "/vizcaya/",
+      "indexable": true,
+      "title": "Tejados y canalones en Vizcaya: todos los municipios | Fuentes"
+    },
+    {
+      "path": "/alava/",
+      "indexable": true,
+      "title": "Tejados y canalones en Álava: todos los municipios | Fuentes"
+    },
+    {
+      "path": "/guipuzcoa/",
+      "indexable": true,
+      "title": "Tejados y canalones en Guipúzcoa: todos los municipios | Fuentes"
+    },
+    {
+      "path": "/burgos/",
+      "indexable": true,
+      "title": "Tejados y canalones en Burgos: todos los municipios | Fuentes"
+    },
+    {
+      "path": "/segovia/",
+      "indexable": true,
+      "title": "Tejados y canalones en Segovia: todos los municipios | Fuentes"
+    },
+    {
+      "path": "/cantabria/",
+      "indexable": true,
+      "title": "Tejados y canalones en Cantabria: todos los municipios | Fuentes"
+    },
+    {
+      "path": "/vizcaya/bilbao/",
+      "indexable": true,
+      "title": "Limpieza de tejados y canalones en Bilbao | Fuentes"
+    },
+    {
+      "path": "/vizcaya/barakaldo/",
+      "indexable": true,
+      "title": "Limpieza de tejados y canalones en Barakaldo | Fuentes"
+    },
+    {
+      "path": "/vizcaya/getxo/",
+      "indexable": true,
+      "title": "Limpieza de tejados y canalones en Getxo | Fuentes"
+    },
+    {
+      "path": "/vizcaya/durango/",
+      "indexable": true,
+      "title": "Limpieza de tejados y canalones en Durango | Fuentes"
+    },
+    {
+      "path": "/vizcaya/gernika/",
+      "indexable": true,
+      "title": "Limpieza de tejados y canalones en Gernika-Lumo | Fuentes"
+    },
+    {
+      "path": "/vizcaya/lekeitio/",
+      "indexable": true,
+      "title": "Limpieza de tejados y canalones en Lekeitio | Fuentes"
+    },
+    {
+      "path": "/vizcaya/mungia/",
+      "indexable": true,
+      "title": "Limpieza de tejados y canalones en Mungia | Fuentes"
+    },
+    {
+      "path": "/vizcaya/portugalete/",
+      "indexable": true,
+      "title": "Limpieza de tejados y canalones en Portugalete | Fuentes"
+    },
+    {
+      "path": "/vizcaya/basauri/",
+      "indexable": true,
+      "title": "Limpieza de tejados y canalones en Basauri | Fuentes"
+    },
+    {
+      "path": "/alava/vitoria-gasteiz/",
+      "indexable": true,
+      "title": "Limpieza de tejados y canalones en Vitoria-Gasteiz | Fuentes"
+    },
+    {
+      "path": "/alava/llodio/",
+      "indexable": true,
+      "title": "Limpieza de tejados y canalones en Llodio | Fuentes"
+    },
+    {
+      "path": "/alava/amurrio/",
+      "indexable": true,
+      "title": "Limpieza de tejados y canalones en Amurrio | Fuentes"
+    },
+    {
+      "path": "/alava/laguardia/",
+      "indexable": true,
+      "title": "Limpieza de tejados y canalones en Laguardia | Fuentes"
+    },
+    {
+      "path": "/alava/agurain/",
+      "indexable": true,
+      "title": "Limpieza de tejados y canalones en Agurain | Fuentes"
+    },
+    {
+      "path": "/guipuzcoa/donostia-san-sebastian/",
+      "indexable": true,
+      "title": "Limpieza de tejados y canalones en Donostia-San Sebastián | Fuentes"
+    },
+    {
+      "path": "/guipuzcoa/irun/",
+      "indexable": true,
+      "title": "Limpieza de tejados y canalones en Irun | Fuentes"
+    },
+    {
+      "path": "/guipuzcoa/eibar/",
+      "indexable": true,
+      "title": "Limpieza de tejados y canalones en Eibar | Fuentes"
+    },
+    {
+      "path": "/guipuzcoa/zarautz/",
+      "indexable": true,
+      "title": "Limpieza de tejados y canalones en Zarautz | Fuentes"
+    },
+    {
+      "path": "/guipuzcoa/tolosa/",
+      "indexable": true,
+      "title": "Limpieza de tejados y canalones en Tolosa | Fuentes"
+    },
+    {
+      "path": "/guipuzcoa/arrasate/",
+      "indexable": true,
+      "title": "Limpieza de tejados y canalones en Arrasate | Fuentes"
+    },
+    {
+      "path": "/burgos/burgos/",
+      "indexable": true,
+      "title": "Limpieza de tejados y canalones en Burgos | Fuentes"
+    },
+    {
+      "path": "/burgos/miranda-de-ebro/",
+      "indexable": true,
+      "title": "Limpieza de tejados y canalones en Miranda de Ebro | Fuentes"
+    },
+    {
+      "path": "/burgos/aranda-de-duero/",
+      "indexable": true,
+      "title": "Limpieza de tejados y canalones en Aranda de Duero | Fuentes"
+    },
+    {
+      "path": "/burgos/medina-de-pomar/",
+      "indexable": true,
+      "title": "Limpieza de tejados y canalones en Medina de Pomar | Fuentes"
+    },
+    {
+      "path": "/burgos/briviesca/",
+      "indexable": true,
+      "title": "Limpieza de tejados y canalones en Briviesca | Fuentes"
+    },
+    {
+      "path": "/burgos/lerma/",
+      "indexable": true,
+      "title": "Limpieza de tejados y canalones en Lerma | Fuentes"
+    },
+    {
+      "path": "/burgos/salas-de-los-infantes/",
+      "indexable": true,
+      "title": "Limpieza de tejados y canalones en Salas de los Infantes | Fuentes"
+    },
+    {
+      "path": "/segovia/segovia/",
+      "indexable": true,
+      "title": "Limpieza de tejados y canalones en Segovia | Fuentes"
+    },
+    {
+      "path": "/segovia/el-espinar/",
+      "indexable": true,
+      "title": "Limpieza de tejados y canalones en El Espinar | Fuentes"
+    },
+    {
+      "path": "/segovia/cuellar/",
+      "indexable": true,
+      "title": "Limpieza de tejados y canalones en Cuéllar | Fuentes"
+    },
+    {
+      "path": "/segovia/real-sitio-de-san-ildefonso/",
+      "indexable": true,
+      "title": "Limpieza de tejados y canalones en Real Sitio de San Ildefonso | Fuentes"
+    },
+    {
+      "path": "/segovia/riaza/",
+      "indexable": true,
+      "title": "Limpieza de tejados y canalones en Riaza | Fuentes"
+    },
+    {
+      "path": "/cantabria/santander/",
+      "indexable": true,
+      "title": "Limpieza de tejados y canalones en Santander | Fuentes"
+    },
+    {
+      "path": "/cantabria/torrelavega/",
+      "indexable": true,
+      "title": "Limpieza de tejados y canalones en Torrelavega | Fuentes"
+    },
+    {
+      "path": "/cantabria/castro-urdiales/",
+      "indexable": true,
+      "title": "Limpieza de tejados y canalones en Castro-Urdiales | Fuentes"
+    },
+    {
+      "path": "/cantabria/laredo/",
+      "indexable": true,
+      "title": "Limpieza de tejados y canalones en Laredo | Fuentes"
+    },
+    {
+      "path": "/cantabria/reinosa/",
+      "indexable": true,
+      "title": "Limpieza de tejados y canalones en Reinosa | Fuentes"
+    },
+    {
+      "path": "/cantabria/potes/",
+      "indexable": true,
+      "title": "Limpieza de tejados y canalones en Potes | Fuentes"
+    },
+    {
+      "path": "/servicios/limpieza-canalones/",
+      "indexable": true,
+      "title": "Limpieza de canalones | Fuentes"
+    },
+    {
+      "path": "/servicios/limpieza-tejados/",
+      "indexable": true,
+      "title": "Limpieza de tejados | Fuentes"
+    },
+    {
+      "path": "/servicios/goteras/",
+      "indexable": true,
+      "title": "Reparación de goteras | Fuentes"
+    },
+    {
+      "path": "/servicios/reparacion-canalones/",
+      "indexable": true,
+      "title": "Canalones y bajantes | Fuentes"
+    },
+    {
+      "path": "/guias/limpieza-o-reparacion/",
+      "indexable": true,
+      "title": "¿Limpieza o reparación? Qué observar antes de llamar | Fuentes"
+    },
+    {
+      "path": "/guias/presupuesto/",
+      "indexable": true,
+      "title": "Cómo pedir presupuesto de tejados y canalones | Fuentes"
+    },
+    {
+      "path": "/aviso-legal/",
+      "indexable": false,
+      "title": "Aviso legal | Fuentes"
+    },
+    {
+      "path": "/privacidad/",
+      "indexable": false,
+      "title": "Privacidad y cookies | Fuentes"
+    }
+  ]
+}

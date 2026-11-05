@@ -1,0 +1,14 @@
+[build]
+  command = "python3 build.py && python3 scripts/check_site.py"
+  publish = "dist"
+
+[context.deploy-preview.environment]
+  INDEXABLE = "false"
+
+[context.branch-deploy.environment]
+  INDEXABLE = "false"
+
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=86400"
