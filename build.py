@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Build static, crawlable pages using only Python's standard library."""
 from pathlib import Path
-import json, os, re, shutil, unicodedata, math
+import json, os, re, shutil, unicodedata, math, hashlib
 from html import escape as esc
 from urllib.parse import urlparse
 ROOT=Path(__file__).resolve().parent
@@ -39,6 +39,15 @@ for h in HUBS.values():h['members'].sort(key=lambda r:slug(r[0]))
 if OUT.exists():shutil.rmtree(OUT)
 OUT.mkdir()
 shutil.copytree(ROOT/'assets',OUT/'assets')
+# Content fingerprints prevent repeat visitors from using an older stylesheet or script.
+def fingerprint_asset(name):
+ source=ROOT/'assets'/name
+ version=hashlib.sha256(source.read_bytes()).hexdigest()[:12]
+ filename=f'{source.stem}.{version}{source.suffix}'
+ shutil.copyfile(source,OUT/'assets'/filename)
+ return '/assets/'+filename
+STYLE_URL=fingerprint_asset('style.css')
+SCRIPT_URL=fingerprint_asset('app.js')
 ROUTES=[]
 def link(p,label,cls=''):return f'<a href="{p}"'+(f' class="{cls}"' if cls else '')+f'>{esc(label)}</a>'
 def crumbs(items):return '<nav class="breadcrumbs" aria-label="Ruta de navegación">'+'<span aria-hidden="true"> / </span>'.join(link(p,n) if i<len(items)-1 else f'<span aria-current="page">{esc(n)}</span>' for i,(n,p) in enumerate(items))+'</nav>'
@@ -70,7 +79,7 @@ def page(p,title,description,body,breadcrumbs=None,service=None,area=None,indexa
  if service:graph[2]['mainEntity']={'@id':full(p)+'#servicio'}
  schema=json.dumps({'@context':'https://schema.org','@graph':graph},ensure_ascii=False).replace('</','<\\/')
  robots='index,follow,max-image-preview:large' if idx else 'noindex,follow'
- text=f'''<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{esc(title)}</title><meta name="description" content="{esc(description,quote=True)}"><meta name="robots" content="{robots}"><link rel="canonical" href="{full(p)}"><meta property="og:type" content="website"><meta property="og:locale" content="es_ES"><meta property="og:site_name" content="{BRAND}"><meta property="og:title" content="{esc(title,quote=True)}"><meta property="og:description" content="{esc(description,quote=True)}"><meta property="og:url" content="{full(p)}"><meta property="og:image" content="{BASE}/assets/trabajos/cubierta-comunidad.webp"><meta name="theme-color" content="#253e32"><link rel="icon" href="/assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="/assets/style.css"><script type="application/ld+json">{schema}</script><script src="/assets/app.js" defer></script></head><body>{header()}<main id="contenido">{body}</main>{footer()}</body></html>'''
+ text=f'''<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{esc(title)}</title><meta name="description" content="{esc(description,quote=True)}"><meta name="robots" content="{robots}"><link rel="canonical" href="{full(p)}"><meta property="og:type" content="website"><meta property="og:locale" content="es_ES"><meta property="og:site_name" content="{BRAND}"><meta property="og:title" content="{esc(title,quote=True)}"><meta property="og:description" content="{esc(description,quote=True)}"><meta property="og:url" content="{full(p)}"><meta property="og:image" content="{BASE}/assets/trabajos/cubierta-comunidad.webp"><meta name="theme-color" content="#253e32"><link rel="icon" href="/assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="{STYLE_URL}"><script type="application/ld+json">{schema}</script><script src="{SCRIPT_URL}" defer></script></head><body>{header()}<main id="contenido">{body}</main>{footer()}</body></html>'''
  dest=OUT/p.strip('/')/'index.html';dest.parent.mkdir(parents=True,exist_ok=True);dest.write_text(text)
  ROUTES.append({'path':p,'indexable':idx,'title':title})
 def town_target(row,h):return path(h) if row[1]==h['code'] else path(h)+'#municipio-'+row[1]
@@ -137,7 +146,7 @@ page('/aviso-legal/','Aviso legal | Fuentes','Titular de la web, contacto e info
 privacy=f'''<section class="inner legal"><h1>Privacidad y cookies</h1><h2>Responsable y contacto</h2><p>{esc(CONFIG['owner'])}, {esc(CONFIG['address'])}. Teléfono: <a href="tel:{PHONE}">{DISPLAY}</a>.</p><h2>El formulario prepara un mensaje</h2><p>Lo que escribes en esta web no se envía a una base de datos propia ni se guarda en almacenamiento local. Al continuar, se abre WhatsApp con el texto preparado. Puedes revisarlo y decidir si lo envías; WhatsApp aplica sus propias condiciones y política de privacidad.</p><h2>Gestión de consultas</h2><p>Los datos que envíes al titular se utilizan para responder a tu consulta y preparar el presupuesto solicitado, como medida previa a una posible contratación. Se conservarán mientras se gestione la consulta y, si contratas, durante los plazos que correspondan a la relación y sus obligaciones legales.</p><h2>Tus derechos</h2><p>Puedes solicitar acceso, rectificación, supresión, oposición, limitación o portabilidad contactando con el titular. También puedes reclamar ante la Agencia Española de Protección de Datos.</p><h2>Cookies y recursos externos</h2><p>El código de esta web no incorpora cookies propias, analítica, publicidad, mapas incrustados ni fuentes externas. Los enlaces a WhatsApp se abren al seleccionarlos. El proveedor de alojamiento puede procesar registros técnicos para servir y proteger la web.</p></section>'''
 page('/privacidad/','Privacidad y cookies | Fuentes','Cómo funciona la consulta por WhatsApp y qué datos se tratan.',privacy+contact(),indexable=False)
 # Real static 404; no fallback that turns missing localities into soft 404s.
-notfound=f'<!doctype html><html lang="es"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,follow"><title>Página no encontrada | Fuentes</title><link rel="stylesheet" href="/assets/style.css"><main class="inner"><h1>Aquí no hay tejado.</h1><p>No encontramos esta página. Puedes buscar tu municipio desde el inicio o llamarnos.</p><a class="btn" href="/">Volver al inicio</a> <a href="tel:{PHONE}">{DISPLAY}</a></main></html>'
+notfound=f'<!doctype html><html lang="es"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,follow"><title>Página no encontrada | Fuentes</title><link rel="stylesheet" href="{STYLE_URL}"><main class="inner"><h1>Aquí no hay tejado.</h1><p>No encontramos esta página. Puedes buscar tu municipio desde el inicio o llamarnos.</p><a class="btn" href="/">Volver al inicio</a> <a href="tel:{PHONE}">{DISPLAY}</a></main></html>'
 (OUT/'404.html').write_text(notfound)
 # Full search data points to real HTML anchors, not thousands of synthetic URLs.
 search=[]
