@@ -1,6 +1,6 @@
 # Revisión previa a publicación
 
-Dominio previsto: https://limpiezacanalonestejadosurgente.es
+Dominio previsto: https://limpiezacanalonestejadosurgente.com
 
 ## Cambios realizados
 

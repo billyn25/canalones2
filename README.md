@@ -1,6 +1,6 @@
 # Fuentes · Tejados y Canalones
 
-Web estática para `https://limpiezacanalonestejadosurgente.es`. Contacto: +34 641 49 05 36.
+Web estática para `https://limpiezacanalonestejadosurgente.com`. Contacto: +34 641 49 05 36.
 
 ## Construir y comprobar
 
@@ -15,7 +15,7 @@ python3 scripts/check_site.py
 
 ## Netlify
 
-Importar este repositorio, rama `main`. `netlify.toml` ya configura el build y `dist/`. Añadir `limpiezacanalonestejadosurgente.es` como dominio principal en Netlify y aplicar los registros DNS que indique su panel. Añadir también `www` como alias si se desea y redirigirlo al dominio principal. No se ha configurado DNS desde este repositorio.
+Importar este repositorio, rama `main`. `netlify.toml` ya configura el build y `dist/`. Añadir `limpiezacanalonestejadosurgente.com` como dominio principal en Netlify y aplicar los registros DNS que indique su panel. Añadir también `www` como alias si se desea y redirigirlo al dominio principal. No se ha configurado DNS desde este repositorio.
 
 La URL canónica se define en `config.json`; no cambia por el host de cada petición. Si se cambia el dominio, actualizar ese dato y reconstruir. `SITE_URL` permite sobrescribirlo explícitamente. Las ramas y deploy previews de Netlify se generan con `INDEXABLE=false`; producción es indexable. La vista previa privada de ChatGPT no sustituye el despliegue público en el dominio.
 
