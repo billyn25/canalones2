@@ -1,6 +1,190 @@
 [
- {"slug":"limpieza-canalones","title":"Limpieza de canalones","tagline":"Que el agua encuentre su camino.","description":"Retirada de hojas, barro y residuos de canalones, revisión de salidas y valoración de bajantes. Consulta por tu vivienda, comunidad o nave.","intro":"Si el agua rebosa cuando llueve, el canalón puede estar lleno de hojas, barro o pequeñas ramas. La limpieza retira esos residuos y permite revisar el paso hacia la bajante. Si hay fugas, deformaciones o soportes sueltos, se valoran como reparación.","image":"canalon.webp","alt":"Agua de lluvia cayendo desde el extremo de un canalón","sections":[["Qué se revisa para presupuestar","Longitud aproximada de los tramos, altura del alero, accesos y cantidad de residuos. También interesa saber si el agua sale por arriba, pierde por una unión o queda retenida después de llover. Esas situaciones no tienen siempre la misma causa."],["Retirada de residuos y recorrido del agua","El alcance debe indicar qué tramos se limpian y cómo se revisan sus salidas. Si el canalón conecta con una bajante obstruida, hay que valorar ese atasco para que la limpieza no deje pendiente el punto que impide evacuar el agua."],["Lo que una limpieza no corrige por sí sola","Un canalón perforado, un soporte vencido o una unión abierta necesitan una reparación específica. Si se observan daños, se diferencia su valoración de la limpieza y se acuerda el trabajo antes de realizarlo."]],"checks":["Municipio y tipo de inmueble.","Fotos generales del alero desde un punto seguro.","Punto donde rebosa o pierde agua.","Alturas y metros aproximados, si los conoces."],"faq":[["¿Puedo contratar solo la limpieza de canalones?","Sí. Es independiente de la limpieza de tejados. Indica si quieres un tramo concreto, todo el perímetro o también revisar la bajante."],["¿Hay que limpiar cada año?","La frecuencia depende de la vegetación próxima, el diseño del desagüe y los antecedentes de atascos. Se valora para cada inmueble; no hay un intervalo válido para todos."]]},
- {"slug":"limpieza-tejados","title":"Limpieza de tejados","tagline":"Cuidar la cubierta empieza por conocerla.","description":"Limpieza de tejados según el material y su estado. Retirada de residuos y vegetación, revisión de desagües y valoración de piezas deterioradas.","intro":"Hojas, suciedad y vegetación acumulada pueden dificultar el desagüe de una cubierta. Antes de limpiarla se valora el material, el estado de las piezas y el acceso. El método debe adaptarse al tejado, sin dar por válida una limpieza a presión para cualquier superficie.","image":"tejado.webp","alt":"Tejas cerámicas bajo la lluvia","sections":[["Primero, material y estado","Una cubierta envejecida, con piezas sueltas o remates dañados, necesita una valoración distinta de otra que solo acumula hojas. Indica si el tejado es de teja, pizarra u otro material y si sabes de reparaciones anteriores."],["La suciedad debe salir del tejado y del desagüe","Si se interviene en la cubierta, conviene prever dónde terminan los residuos. Las limahoyas, canalones y bocas de bajante pueden concentrarlos. El presupuesto debe concretar si su limpieza también está incluida."],["Limpieza, reparación e impermeabilización","Retirar suciedad no repara una teja rota ni sustituye una impermeabilización deteriorada. Si existen filtraciones, se revisan los indicios para separar el mantenimiento de los trabajos que necesita la entrada de agua."]],"checks":["Foto general de la cubierta sin subir a ella.","Material y superficie aproximada, si los sabes.","Tipo de residuos o vegetación visible.","Presencia de goteras y reparaciones anteriores."],"faq":[["¿Se puede pedir tejado y canalones juntos?","Sí. Se puede preparar un presupuesto conjunto que detalle la superficie de cubierta, los canalones y las salidas que se incluyen."],["¿Todos los tejados admiten agua a presión?","No. El material, su fijación y su estado condicionan el método. Antes de decidirlo hay que valorar la cubierta."]]},
- {"slug":"goteras","title":"Reparación de goteras","tagline":"Primero, saber por dónde entra.","description":"Revisión de goteras, tejas desplazadas, remates y encuentros de cubierta. Consulta la disponibilidad para valorar una entrada de agua.","intro":"La mancha del techo muestra dónde se hace visible el agua, pero no siempre dónde entra. Para valorar una gotera interesa conocer cuándo aparece, con qué lluvia y si ya se reparó antes. Se revisan cubierta, remates y evacuación antes de proponer la actuación.","image":"tejado.webp","alt":"Cubierta de tejas cerámicas durante la lluvia","sections":[["Qué información ayuda a localizar el origen","Describe si cae agua o aparece una mancha, cuánto tarda en verse y si sucede con viento. Una foto de la habitación y otra del exterior ayudan a relacionar la humedad con chimeneas, ventanas de cubierta, medianeras y desagües."],["Qué puede necesitar reparación","Según lo observado, se puede valorar una teja desplazada o rota, un remate deteriorado, un encuentro con pared o una evacuación que no funciona. Si hace falta una actuación de impermeabilización, se explica y presupuesta de manera específica."],["Si está entrando agua ahora","Llama e indica el municipio y lo que está ocurriendo para consultar disponibilidad. No subas a una cubierta mojada para buscar el origen. La intervención se organiza según las condiciones de acceso, la revisión y los medios necesarios."]],"checks":["Localidad y tipo de edificio.","Foto del interior y ubicación de la humedad.","Momento en que aparece: lluvia, viento o después.","Qué reparaciones se hicieron antes, si las hubo."],"faq":[["¿Basta con limpiar el canalón para quitar una gotera?","Si el origen es un rebose por obstrucción, la limpieza puede resolver ese problema. Si hay tejas o remates dañados, necesitan reparación. Se comprueba antes de decidir."],["¿Prometéis un plazo de llegada?","La disponibilidad y el desplazamiento se confirman al contactar. El acceso y las condiciones de la cubierta también pueden condicionar cuándo se interviene."]]},
- {"slug":"reparacion-canalones","title":"Canalones y bajantes","tagline":"Uniones, fugas y atascos, bien revisados.","description":"Valoración de fugas, uniones, soportes y bajantes atascadas. Reparación o sustitución según el estado del canalón y su evacuación.","intro":"Un canalón que gotea no siempre está atascado. Puede tener una unión abierta, un tramo deteriorado o soportes que han cedido. La revisión permite valorar si conviene una reparación localizada, un desatasco o sustituir algún elemento.","image":"canalon.webp","alt":"Detalle de un canalón evacuando agua de lluvia","sections":[["Dónde sale el agua importa","Explica si rebosa por el borde, gotea por una junta o se escapa a mitad de la bajante. Son pistas distintas. Si puedes ver el problema durante la lluvia desde un lugar seguro, una foto o un vídeo corto ayuda a preparar la consulta."],["Reparar sin cambiar por cambiar","Una fuga puntual no exige siempre sustituir todo el canalón. Se valora el material, el estado de los tramos próximos y sus soportes. Si se propone sustituir una pieza o un tramo, el presupuesto debe indicar cuál y por qué."],["Bajantes y conexiones","Una salida obstruida o una unión de bajante dañada puede mantener el problema aunque se limpie el canalón. Indica si hay registros accesibles y si el agua afecta a varias plantas para preparar la revisión del recorrido."]],"checks":["Punto exacto de fuga o desbordamiento.","Foto de detalle y del tramo completo.","Material del canalón, si lo conoces.","Altura, acceso y existencia de registros."],"faq":[["¿Se puede reparar una unión sin cambiar el tramo completo?","Depende del material y de su estado. Se revisan la unión y los tramos próximos para valorar si la reparación localizada es adecuada."],["¿Podéis presupuestar una sustitución parcial?","Sí, cuando la revisión indique que es una opción adecuada. Se detallan los elementos y tramos incluidos."]]}
+  {
+    "slug": "limpieza-canalones",
+    "title": "Limpieza de canalones",
+    "tagline": "Que el agua encuentre su camino.",
+    "description": "Retirada de hojas, barro y residuos de canalones, revisión de salidas y valoración de bajantes. Consulta por tu vivienda, comunidad o nave.",
+    "intro": "Si el agua rebosa cuando llueve, el canalón puede estar lleno de hojas, barro o pequeñas ramas. La limpieza retira esos residuos y permite revisar el paso hacia la bajante. Si hay fugas, deformaciones o soportes sueltos, se valoran como reparación.",
+    "image": "trabajos/canalon-alero.webp",
+    "alt": "Vista de un canalón que recorre el alero de una cubierta de teja.",
+    "sections": [
+      [
+        "Qué se revisa para presupuestar",
+        "Longitud aproximada de los tramos, altura del alero, accesos y cantidad de residuos. También interesa saber si el agua sale por arriba, pierde por una unión o queda retenida después de llover. Esas situaciones no tienen siempre la misma causa."
+      ],
+      [
+        "Retirada de residuos y recorrido del agua",
+        "El alcance debe indicar qué tramos se limpian y cómo se revisan sus salidas. Si el canalón conecta con una bajante obstruida, hay que valorar ese atasco para que la limpieza no deje pendiente el punto que impide evacuar el agua."
+      ],
+      [
+        "Lo que una limpieza no corrige por sí sola",
+        "Un canalón perforado, un soporte vencido o una unión abierta necesitan una reparación específica. Si se observan daños, se diferencia su valoración de la limpieza y se acuerda el trabajo antes de realizarlo."
+      ]
+    ],
+    "checks": [
+      "Municipio y tipo de inmueble.",
+      "Fotos generales del alero desde un punto seguro.",
+      "Punto donde rebosa o pierde agua.",
+      "Alturas y metros aproximados, si los conoces."
+    ],
+    "faq": [
+      [
+        "¿Puedo contratar solo la limpieza de canalones?",
+        "Sí. Es independiente de la limpieza de tejados. Indica si quieres un tramo concreto, todo el perímetro o también revisar la bajante."
+      ],
+      [
+        "¿Hay que limpiar cada año?",
+        "La frecuencia depende de la vegetación próxima, el diseño del desagüe y los antecedentes de atascos. Se valora para cada inmueble; no hay un intervalo válido para todos."
+      ]
+    ],
+    "width": 901,
+    "height": 1600,
+    "photo_caption": "Canalón junto al alero · fotografía propia.",
+    "photo_ids": [
+      "canalon-alero",
+      "residuos-encuentro",
+      "teja-vegetacion"
+    ]
+  },
+  {
+    "slug": "limpieza-tejados",
+    "title": "Limpieza de tejados",
+    "tagline": "Cuidar la cubierta empieza por conocerla.",
+    "description": "Limpieza de tejados según el material y su estado. Retirada de residuos y vegetación, revisión de desagües y valoración de piezas deterioradas.",
+    "intro": "Hojas, suciedad y vegetación acumulada pueden dificultar el desagüe de una cubierta. Antes de limpiarla se valora el material, el estado de las piezas y el acceso. El método debe adaptarse al tejado, sin dar por válida una limpieza a presión para cualquier superficie.",
+    "image": "trabajos/cubierta-comunidad.webp",
+    "alt": "Vista general de un tejado de comunidad fotografiado durante una revisión.",
+    "sections": [
+      [
+        "Primero, material y estado",
+        "Una cubierta envejecida, con piezas sueltas o remates dañados, necesita una valoración distinta de otra que solo acumula hojas. Indica si el tejado es de teja, pizarra u otro material y si sabes de reparaciones anteriores."
+      ],
+      [
+        "La suciedad debe salir del tejado y del desagüe",
+        "Si se interviene en la cubierta, conviene prever dónde terminan los residuos. Las limahoyas, canalones y bocas de bajante pueden concentrarlos. El presupuesto debe concretar si su limpieza también está incluida."
+      ],
+      [
+        "Limpieza, reparación e impermeabilización",
+        "Retirar suciedad no repara una teja rota ni sustituye una impermeabilización deteriorada. Si existen filtraciones, se revisan los indicios para separar el mantenimiento de los trabajos que necesita la entrada de agua."
+      ]
+    ],
+    "checks": [
+      "Foto general de la cubierta sin subir a ella.",
+      "Material y superficie aproximada, si los sabes.",
+      "Tipo de residuos o vegetación visible.",
+      "Presencia de goteras y reparaciones anteriores."
+    ],
+    "faq": [
+      [
+        "¿Se puede pedir tejado y canalones juntos?",
+        "Sí. Se puede preparar un presupuesto conjunto que detalle la superficie de cubierta, los canalones y las salidas que se incluyen."
+      ],
+      [
+        "¿Todos los tejados admiten agua a presión?",
+        "No. El material, su fijación y su estado condicionan el método. Antes de decidirlo hay que valorar la cubierta."
+      ]
+    ],
+    "width": 901,
+    "height": 1600,
+    "photo_caption": "Cubierta de una comunidad · fotografía propia.",
+    "photo_ids": [
+      "tejas-suciedad",
+      "teja-vegetacion",
+      "cubierta-ceramica"
+    ]
+  },
+  {
+    "slug": "goteras",
+    "title": "Reparación de goteras",
+    "tagline": "Primero, saber por dónde entra.",
+    "description": "Revisión de goteras, tejas desplazadas, remates y encuentros de cubierta. Consulta la disponibilidad para valorar una entrada de agua.",
+    "intro": "La mancha del techo muestra dónde se hace visible el agua, pero no siempre dónde entra. Para valorar una gotera interesa conocer cuándo aparece, con qué lluvia y si ya se reparó antes. Se revisan cubierta, remates y evacuación antes de proponer la actuación.",
+    "image": "trabajos/revision-alero.webp",
+    "alt": "Revestimiento desprendido en la cara inferior de un alero.",
+    "sections": [
+      [
+        "Qué información ayuda a localizar el origen",
+        "Describe si cae agua o aparece una mancha, cuánto tarda en verse y si sucede con viento. Una foto de la habitación y otra del exterior ayudan a relacionar la humedad con chimeneas, ventanas de cubierta, medianeras y desagües."
+      ],
+      [
+        "Qué puede necesitar reparación",
+        "Según lo observado, se puede valorar una teja desplazada o rota, un remate deteriorado, un encuentro con pared o una evacuación que no funciona. Si hace falta una actuación de impermeabilización, se explica y presupuesta de manera específica."
+      ],
+      [
+        "Si está entrando agua ahora",
+        "Llama e indica el municipio y lo que está ocurriendo para consultar disponibilidad. No subas a una cubierta mojada para buscar el origen. La intervención se organiza según las condiciones de acceso, la revisión y los medios necesarios."
+      ]
+    ],
+    "checks": [
+      "Localidad y tipo de edificio.",
+      "Foto del interior y ubicación de la humedad.",
+      "Momento en que aparece: lluvia, viento o después.",
+      "Qué reparaciones se hicieron antes, si las hubo."
+    ],
+    "faq": [
+      [
+        "¿Basta con limpiar el canalón para quitar una gotera?",
+        "Si el origen es un rebose por obstrucción, la limpieza puede resolver ese problema. Si hay tejas o remates dañados, necesitan reparación. Se comprueba antes de decidir."
+      ],
+      [
+        "¿Prometéis un plazo de llegada?",
+        "La disponibilidad y el desplazamiento se confirman al contactar. El acceso y las condiciones de la cubierta también pueden condicionar cuándo se interviene."
+      ]
+    ],
+    "width": 901,
+    "height": 1600,
+    "photo_caption": "Estado de un alero · fotografía propia.",
+    "photo_ids": [
+      "revision-alero",
+      "teja-fisurada",
+      "remate-cumbrera"
+    ]
+  },
+  {
+    "slug": "reparacion-canalones",
+    "title": "Canalones y bajantes",
+    "tagline": "Uniones, fugas y atascos, bien revisados.",
+    "description": "Valoración de fugas, uniones, soportes y bajantes atascadas. Reparación o sustitución según el estado del canalón y su evacuación.",
+    "intro": "Un canalón que gotea no siempre está atascado. Puede tener una unión abierta, un tramo deteriorado o soportes que han cedido. La revisión permite valorar si conviene una reparación localizada, un desatasco o sustituir algún elemento.",
+    "image": "trabajos/canalon-alero.webp",
+    "alt": "Vista de un canalón que recorre el alero de una cubierta de teja.",
+    "sections": [
+      [
+        "Dónde sale el agua importa",
+        "Explica si rebosa por el borde, gotea por una junta o se escapa a mitad de la bajante. Son pistas distintas. Si puedes ver el problema durante la lluvia desde un lugar seguro, una foto o un vídeo corto ayuda a preparar la consulta."
+      ],
+      [
+        "Reparar sin cambiar por cambiar",
+        "Una fuga puntual no exige siempre sustituir todo el canalón. Se valora el material, el estado de los tramos próximos y sus soportes. Si se propone sustituir una pieza o un tramo, el presupuesto debe indicar cuál y por qué."
+      ],
+      [
+        "Bajantes y conexiones",
+        "Una salida obstruida o una unión de bajante dañada puede mantener el problema aunque se limpie el canalón. Indica si hay registros accesibles y si el agua afecta a varias plantas para preparar la revisión del recorrido."
+      ]
+    ],
+    "checks": [
+      "Punto exacto de fuga o desbordamiento.",
+      "Foto de detalle y del tramo completo.",
+      "Material del canalón, si lo conoces.",
+      "Altura, acceso y existencia de registros."
+    ],
+    "faq": [
+      [
+        "¿Se puede reparar una unión sin cambiar el tramo completo?",
+        "Depende del material y de su estado. Se revisan la unión y los tramos próximos para valorar si la reparación localizada es adecuada."
+      ],
+      [
+        "¿Podéis presupuestar una sustitución parcial?",
+        "Sí, cuando la revisión indique que es una opción adecuada. Se detallan los elementos y tramos incluidos."
+      ]
+    ],
+    "width": 901,
+    "height": 1600,
+    "photo_caption": "Canalón junto al alero · fotografía propia.",
+    "photo_ids": [
+      "canalon-alero",
+      "residuos-encuentro",
+      "cumbrera-comunidad"
+    ]
+  }
 ]

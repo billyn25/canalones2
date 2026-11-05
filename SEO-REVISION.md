@@ -74,3 +74,11 @@ Se amplían de 38 a 60 las páginas principales: Vizcaya 12, Álava 7, Guipúzco
 Se conservan todas las rutas de páginas anteriores. Los destinos a pueblos pequeños se regeneran para apuntar a su zona actual. Las nuevas fichas cuentan con introducción, aspecto de revisión, datos para la consulta y pregunta propios; no contienen trabajos locales ni testimonios inventados. El tamaño final es de 75 páginas, con 73 URLs comerciales/editoriales en el sitemap y dos páginas legales.
 
 El control de producción calcula el número esperado de páginas a partir del catálogo de principales para admitir ampliaciones legítimas sin permitir un sitemap vacío. Se han comprobado enlaces, anclas, cobertura, canónicas, títulos, descripciones, datos estructurados territoriales y ausencia de páginas huérfanas sobre la nueva salida de producción.
+
+
+
+## Fotografías propias — 5 de noviembre de 2026
+
+Se incorporan diez fotografías identificadas por el titular como trabajos reales. Sustituyen las fotografías de ambientación del inicio y de los servicios. Inicio, seis provincias y 60 municipios principales muestran selecciones del trabajo del negocio; `/trabajos/` reúne las diez imágenes. Las fotos se amplían mediante un diálogo con botones, teclado y cierre accesible. Las descripciones se limitan a lo visible, sin inventar localidad, fecha, resultado, cliente ni parejas de antes/después.
+
+La nueva salida tiene 76 páginas y 74 URLs en el sitemap, con la cobertura de 934 municipios intacta. Se comprueban también la existencia de cada imagen, texto alternativo y dimensiones. El aviso legal distingue ahora las fotografías propias. Queda pendiente identificar dónde se realizó cada trabajo para poder vincularlo de forma específica a una localidad; compartir una galería corporativa entre páginas no documenta por sí mismo un trabajo en cada municipio.

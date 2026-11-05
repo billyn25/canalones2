@@ -1,0 +1,136 @@
+[
+  {
+    "id": "teja-vegetacion",
+    "title": "Vegetación entre las tejas",
+    "caption": "Acumulación de vegetación y residuos entre las piezas de una cubierta cerámica.",
+    "alt": "Acumulación de vegetación y residuos entre las piezas de una cubierta cerámica.",
+    "tags": [
+      "tejados"
+    ],
+    "file": "trabajos/teja-vegetacion.webp",
+    "thumbnail": "trabajos/teja-vegetacion-small.webp",
+    "width": 901,
+    "height": 1600
+  },
+  {
+    "id": "teja-fisurada",
+    "title": "Detalle de una teja fisurada",
+    "caption": "Detalle de una pieza cerámica con una fisura visible y residuos alrededor.",
+    "alt": "Detalle de una pieza cerámica con una fisura visible y residuos alrededor.",
+    "tags": [
+      "goteras",
+      "tejados"
+    ],
+    "file": "trabajos/teja-fisurada.webp",
+    "thumbnail": "trabajos/teja-fisurada-small.webp",
+    "width": 901,
+    "height": 1600
+  },
+  {
+    "id": "cubierta-ceramica",
+    "title": "Revisión de cubierta cerámica",
+    "caption": "Vista de una cubierta con tejas cerámicas y zonas en distinto estado de conservación.",
+    "alt": "Vista de una cubierta con tejas cerámicas y zonas en distinto estado de conservación.",
+    "tags": [
+      "tejados",
+      "goteras"
+    ],
+    "file": "trabajos/cubierta-ceramica.webp",
+    "thumbnail": "trabajos/cubierta-ceramica-small.webp",
+    "width": 901,
+    "height": 1600
+  },
+  {
+    "id": "cumbrera-comunidad",
+    "title": "Encuentro en la cumbrera",
+    "caption": "Piezas de cumbrera y unión entre dos faldones de una cubierta.",
+    "alt": "Piezas de cumbrera y unión entre dos faldones de una cubierta.",
+    "tags": [
+      "goteras",
+      "tejados"
+    ],
+    "file": "trabajos/cumbrera-comunidad.webp",
+    "thumbnail": "trabajos/cumbrera-comunidad-small.webp",
+    "width": 901,
+    "height": 1600
+  },
+  {
+    "id": "remate-cumbrera",
+    "title": "Remate entre faldones",
+    "caption": "Detalle del remate de cumbrera de una cubierta de teja.",
+    "alt": "Detalle del remate de cumbrera de una cubierta de teja.",
+    "tags": [
+      "goteras"
+    ],
+    "file": "trabajos/remate-cumbrera.webp",
+    "thumbnail": "trabajos/remate-cumbrera-small.webp",
+    "width": 901,
+    "height": 1600
+  },
+  {
+    "id": "cubierta-comunidad",
+    "title": "Cubierta de una comunidad",
+    "caption": "Vista general de un tejado de comunidad fotografiado durante una revisión.",
+    "alt": "Vista general de un tejado de comunidad fotografiado durante una revisión.",
+    "tags": [
+      "tejados"
+    ],
+    "file": "trabajos/cubierta-comunidad.webp",
+    "thumbnail": "trabajos/cubierta-comunidad-small.webp",
+    "width": 901,
+    "height": 1600
+  },
+  {
+    "id": "revision-alero",
+    "title": "Estado de un alero",
+    "caption": "Revestimiento desprendido en la cara inferior de un alero.",
+    "alt": "Revestimiento desprendido en la cara inferior de un alero.",
+    "tags": [
+      "goteras"
+    ],
+    "file": "trabajos/revision-alero.webp",
+    "thumbnail": "trabajos/revision-alero-small.webp",
+    "width": 901,
+    "height": 1600
+  },
+  {
+    "id": "residuos-encuentro",
+    "title": "Residuos en un encuentro",
+    "caption": "Musgo y pequeños residuos acumulados en el encuentro entre piezas de cubierta.",
+    "alt": "Musgo y pequeños residuos acumulados en el encuentro entre piezas de cubierta.",
+    "tags": [
+      "tejados",
+      "canalones"
+    ],
+    "file": "trabajos/residuos-encuentro.webp",
+    "thumbnail": "trabajos/residuos-encuentro-small.webp",
+    "width": 901,
+    "height": 1600
+  },
+  {
+    "id": "canalon-alero",
+    "title": "Canalón junto al alero",
+    "caption": "Vista de un canalón que recorre el alero de una cubierta de teja.",
+    "alt": "Vista de un canalón que recorre el alero de una cubierta de teja.",
+    "tags": [
+      "canalones"
+    ],
+    "file": "trabajos/canalon-alero.webp",
+    "thumbnail": "trabajos/canalon-alero-small.webp",
+    "width": 901,
+    "height": 1600
+  },
+  {
+    "id": "tejas-suciedad",
+    "title": "Suciedad adherida a la teja",
+    "caption": "Detalle de la superficie de tejas con suciedad y vegetación adherida.",
+    "alt": "Detalle de la superficie de tejas con suciedad y vegetación adherida.",
+    "tags": [
+      "tejados"
+    ],
+    "file": "trabajos/tejas-suciedad.webp",
+    "thumbnail": "trabajos/tejas-suciedad-small.webp",
+    "width": 901,
+    "height": 1600
+  }
+]

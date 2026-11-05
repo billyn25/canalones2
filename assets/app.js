@@ -66,3 +66,40 @@ if(provinceSearch)provinceSearch.addEventListener('input',()=>{
  });
  document.querySelector('#directory-status').textContent=q?(count?`${count} ${count===1?'municipio encontrado':'municipios encontrados'}.`:'No encontramos ese nombre. Puedes consultar la localidad por teléfono o WhatsApp.'):'';
 });
+
+
+// Native dialog keeps focus inside the enlarged photograph. Links also work without JavaScript.
+const workLinks=[...document.querySelectorAll('[data-work-photo]')];
+if(workLinks.length&&typeof HTMLDialogElement!=='undefined'){
+ let dialog=null,current=0,opener=null,largeImage,caption,counter,fullLink;
+ const showPhoto=index=>{
+  current=(index+workLinks.length)%workLinks.length;
+  const item=workLinks[current];
+  largeImage.src=item.href;largeImage.alt=item.querySelector('img').alt;
+  caption.textContent=item.dataset.caption;
+  counter.textContent=`${current+1} / ${workLinks.length}`;
+  fullLink.href=item.href;
+ };
+ const initializeDialog=()=>{
+  dialog=document.createElement('dialog');dialog.className='photo-dialog';dialog.setAttribute('aria-label','Fotografía ampliada de nuestros trabajos');
+  const toolbar=document.createElement('div');toolbar.className='photo-toolbar';
+  counter=document.createElement('span');counter.setAttribute('aria-live','polite');
+  const close=document.createElement('button');close.type='button';close.className='photo-close';close.textContent='Cerrar ×';close.addEventListener('click',()=>dialog.close());
+  toolbar.append(counter,close);
+  const stage=document.createElement('div');stage.className='photo-stage';
+  const previous=document.createElement('button');previous.type='button';previous.textContent='←';previous.setAttribute('aria-label','Fotografía anterior');previous.addEventListener('click',()=>showPhoto(current-1));
+  largeImage=document.createElement('img');
+  const next=document.createElement('button');next.type='button';next.textContent='→';next.setAttribute('aria-label','Fotografía siguiente');next.addEventListener('click',()=>showPhoto(current+1));
+  stage.append(previous,largeImage,next);
+  caption=document.createElement('p');caption.className='photo-caption';caption.setAttribute('aria-live','polite');
+  fullLink=document.createElement('a');fullLink.textContent='Abrir fotografía original optimizada ↗';fullLink.target='_blank';fullLink.rel='noopener';fullLink.className='photo-original';
+  dialog.append(toolbar,stage,caption,fullLink);document.body.append(dialog);
+  dialog.addEventListener('close',()=>{document.body.classList.remove('gallery-open');opener?.focus({preventScroll:true})});
+  dialog.addEventListener('keydown',event=>{if(event.key==='ArrowLeft'){event.preventDefault();showPhoto(current-1)}if(event.key==='ArrowRight'){event.preventDefault();showPhoto(current+1)}});
+  dialog.addEventListener('click',event=>{if(event.target!==dialog)return;const rect=dialog.getBoundingClientRect();if(event.clientX<rect.left||event.clientX>rect.right||event.clientY<rect.top||event.clientY>rect.bottom)dialog.close()});
+ };
+ workLinks.forEach((item,index)=>item.addEventListener('click',event=>{
+  if(event.button!==0||event.metaKey||event.ctrlKey||event.shiftKey||event.altKey)return;
+  event.preventDefault();if(!dialog)initializeDialog();opener=item;showPhoto(index);document.body.classList.add('gallery-open');dialog.showModal();
+ }));
+}

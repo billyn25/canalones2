@@ -9,11 +9,12 @@ R=Path(__file__).resolve().parents[1];D=R/'dist'
 report=json.loads((R/'build-report.json').read_text());base=report['site_url'];pages={};errors=[]
 class Page(HTMLParser):
  def __init__(self,text):
-  super().__init__();self.links=[];self.ids=set();self.h1=0;self.canonical=[];self.title='';self.description='';self.robot='';self.schema=[];self.scripts=False;self.schemaText='';self.inTitle=False;self.inFooter=False;self.footer='';self.feed(text)
+  super().__init__();self.links=[];self.images=[];self.ids=set();self.h1=0;self.canonical=[];self.title='';self.description='';self.robot='';self.schema=[];self.scripts=False;self.schemaText='';self.inTitle=False;self.inFooter=False;self.footer='';self.feed(text)
  def handle_starttag(self,tag,attrs):
   a=dict(attrs)
   if a.get('id'):self.ids.add(a['id'])
   if tag=='a' and a.get('href'):self.links.append(a['href'])
+  if tag=='img':self.images.append(a)
   if tag=='h1':self.h1+=1
   if tag=='link' and a.get('rel')=='canonical':self.canonical.append(a.get('href'))
   if tag=='meta' and a.get('name')=='description':self.description=a.get('content','')
@@ -35,6 +36,10 @@ coverage_rows=json.loads((D/'assets/municipios.json').read_text())
 for route in report['routes']:
  p=route['path'];text=(D/p.strip('/')/'index.html').read_text();a=Page(text);pages[p]=a
  if a.h1!=1:errors.append(f'{p}: {a.h1} H1')
+ for image in a.images:
+  src=image.get('src','')
+  if src.startswith('/') and not (D/src.lstrip('/')).is_file():errors.append(f'{p}: imagen inexistente {src}')
+  if not image.get('alt') or not image.get('width') or not image.get('height'):errors.append(f'{p}: imagen sin descripción o dimensiones')
  if a.canonical!=[base+p]:errors.append(f'{p}: canonical incorrecta')
  if not a.description or not a.title:errors.append(f'{p}: metadatos vacíos')
  if route['indexable'] and 'noindex' in a.robot:errors.append(f'{p}: noindex inesperado')
@@ -80,7 +85,7 @@ for p in pages:
 ns={'s':'http://www.sitemaps.org/schemas/sitemap/0.9'}
 sitemap=[n.text for n in ET.parse(D/'sitemap.xml').findall('s:url/s:loc',ns)]
 expected=[base+r['path'] for r in report['routes'] if r['indexable']]
-expected_count=len(json.loads((R/'data/hubs.json').read_text()))+13
+expected_count=len(json.loads((R/'data/hubs.json').read_text()))+14
 if os.environ.get('CONTEXT')=='production' and len(expected)!=expected_count:errors.append(f'Producción debe tener {expected_count} páginas indexables, no un sitemap vacío')
 if set(sitemap)!=set(expected) or len(sitemap)!=len(set(sitemap)):errors.append('Sitemap no coincide con páginas indexables')
 allrows=json.loads((D/'assets/municipios.json').read_text())
@@ -99,3 +104,4 @@ if not (D/'404.html').exists():errors.append('Falta 404')
 if errors:
  print('\n'.join(errors));raise SystemExit(1)
 print(f'OK: {len(pages)} páginas, {len(sitemap)} URLs de sitemap, 934 municipios, enlaces y anclas válidos, sin páginas huérfanas, títulos/descripciones únicos y nombre personal solo en legales.')
+

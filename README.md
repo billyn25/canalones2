@@ -11,7 +11,7 @@ python3 build.py
 python3 scripts/check_site.py
 ```
 
-`dist/` es el directorio que se publica. Contiene 75 páginas HTML: inicio, seis provincias, 60 municipios principales, cuatro servicios, dos guías y dos páginas legales. El sitemap contiene las 73 páginas comerciales/editoriales. Las páginas legales llevan `noindex,follow` y siguen accesibles desde el pie.
+`dist/` es el directorio que se publica. Contiene 76 páginas HTML: inicio, seis provincias, 60 municipios principales, cuatro servicios, una galería de trabajos, dos guías y dos páginas legales. El sitemap contiene las 74 páginas comerciales/editoriales. Las páginas legales llevan `noindex,follow` y siguen accesibles desde el pie.
 
 ## Netlify
 
@@ -47,3 +47,8 @@ El nombre completo del titular solo se imprime en aviso legal y privacidad; no a
 ### Protección de publicación
 
 Producción en Netlify fija `INDEXABLE=true`. Si el entorno de producción intenta publicar con `INDEXABLE=false` o con una URL canónica distinta del dominio definido en `config.json`, el build falla antes de escribir la salida. Las páginas de provincia describen solo esa provincia en `Service.areaServed`; los principales incluyen los municipios de su lista visible. El informe `SEO-REVISION.md` distingue las comprobaciones del código de lo que todavía debe verificarse en el dominio público y Search Console.
+
+
+## Fotografías de trabajos
+
+`data/photos.json` describe las diez fotografías aportadas por el titular. Se publican como trabajos y revisiones propios, con descripciones de los elementos visibles, sin asignar una localidad, fecha de ejecución, intervención completada o un antes/después que no se haya confirmado. Las imágenes figuran en inicio, servicios, provincias y principales; `/trabajos/` reúne las diez. Los originales aportados no se retocan: se generan copias WebP y miniaturas para la web. Los enlaces a fotografías funcionan sin JavaScript; la ampliación en diálogo añade cierre, navegación con botones y teclado y recuperación del foco.

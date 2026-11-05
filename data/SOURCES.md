@@ -37,3 +37,9 @@ OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 - `assets/canalon.webp`: Luke Southern, «A close up of a rain gutter on a roof», Unsplash. https://unsplash.com/photos/a-close-up-of-a-rain-gutter-on-a-roof-ZzZouwiQWV0 . Licencia Unsplash: https://unsplash.com/license . Adaptación: reducción de tamaño y conversión a WebP.
 
 Son fotografías de ambientación; no se atribuyen al titular como trabajos realizados ni se presentan como imágenes de las localidades cubiertas.
+
+
+
+## Fotografías de trabajos aportadas el 5 de noviembre de 2026
+
+El usuario facilita diez fotografías y las identifica como trabajos reales del negocio. Archivos publicados: `assets/trabajos/*.webp`. El catálogo y las descripciones figuran en `data/photos.json`. Se generan miniaturas y copias optimizadas en WebP; no se modifica el contenido de las escenas. No se deduce el municipio, la fecha del trabajo ni que una escena documente una reparación terminada. Las fotografías anteriores de Pexels y Unsplash se conservan como recursos heredados, pero ya no se utilizan en las páginas.

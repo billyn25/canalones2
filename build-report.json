@@ -1,7 +1,7 @@
 {
   "site_url": "https://limpiezacanalonestejadosurgente.com",
-  "pages": 75,
-  "sitemap_pages": 73,
+  "pages": 76,
+  "sitemap_pages": 74,
   "principal_municipalities": 60,
   "covered_municipalities": 934,
   "provinces": {
@@ -367,6 +367,11 @@
       "path": "/servicios/reparacion-canalones/",
       "indexable": true,
       "title": "Canalones y bajantes | Fuentes"
+    },
+    {
+      "path": "/trabajos/",
+      "indexable": true,
+      "title": "Fotos de nuestros trabajos en tejados y canalones | Fuentes"
     },
     {
       "path": "/guias/limpieza-o-reparacion/",
