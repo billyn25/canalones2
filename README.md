@@ -43,3 +43,7 @@ El formulario construye el mensaje en el navegador y abre WhatsApp al pulsar el 
 - `build.py`: plantillas, páginas, sitemap, robots y configuración de salida.
 
 El nombre completo del titular solo se imprime en aviso legal y privacidad; no aparece en el pie ni como persona en el JSON-LD. No añadir una ficha de negocio o una dirección ficticia por municipio.
+
+### Protección de publicación
+
+Producción en Netlify fija `INDEXABLE=true`. Si el entorno de producción intenta publicar con `INDEXABLE=false` o con una URL canónica distinta del dominio definido en `config.json`, el build falla antes de escribir la salida. Las páginas de provincia describen solo esa provincia en `Service.areaServed`; los principales incluyen los municipios de su lista visible. El informe `SEO-REVISION.md` distingue las comprobaciones del código de lo que todavía debe verificarse en el dominio público y Search Console.

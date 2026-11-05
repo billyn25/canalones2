@@ -4,7 +4,7 @@ from pathlib import Path
 from html.parser import HTMLParser
 from collections import defaultdict,deque
 from urllib.parse import urlparse,unquote
-import json,xml.etree.ElementTree as ET,re
+import json,xml.etree.ElementTree as ET,re,os
 R=Path(__file__).resolve().parents[1];D=R/'dist'
 report=json.loads((R/'build-report.json').read_text());base=report['site_url'];pages={};errors=[]
 class Page(HTMLParser):
@@ -30,6 +30,8 @@ class Page(HTMLParser):
   if tag=='footer':self.inFooter=False
   if tag=='script' and self.scripts:
    self.schema.append(json.loads(self.schemaText));self.scripts=False
+expected_provinces={'vizcaya':'Vizcaya','alava':'Álava','guipuzcoa':'Guipúzcoa','burgos':'Burgos','segovia':'Segovia','cantabria':'Cantabria'}
+coverage_rows=json.loads((D/'assets/municipios.json').read_text())
 for route in report['routes']:
  p=route['path'];text=(D/p.strip('/')/'index.html').read_text();a=Page(text);pages[p]=a
  if a.h1!=1:errors.append(f'{p}: {a.h1} H1')
@@ -44,6 +46,14 @@ for route in report['routes']:
   for item in sch['@graph']:
    if item.get('@type')=='Service':
     if item.get('provider')!={'@id':base+'/#negocio'}:errors.append(f'{p}: proveedor no enlazado')
+    coverage=item.get('areaServed',[])
+    if isinstance(coverage,dict):coverage=[coverage]
+    if p.strip('/') in expected_provinces:
+     expected=expected_provinces[p.strip('/')]
+     if coverage!=[{'@type':'AdministrativeArea','name':expected}]:errors.append(f'{p}: cobertura provincial incorrecta')
+    elif p.split('/')[1] in expected_provinces and len(p.strip('/').split('/'))==2:
+     covered_names={row['name'] for row in coverage_rows if urlparse(row['url']).path==p}
+     if {place.get('name') for place in coverage}!=covered_names:errors.append(f'{p}: cobertura local no coincide con la lista visible')
    if item.get('@type')=='BreadcrumbList':
     pos=[x['position'] for x in item['itemListElement']]
     if pos!=list(range(1,len(pos)+1)):errors.append(f'{p}: posiciones breadcrumb')
@@ -70,6 +80,7 @@ for p in pages:
 ns={'s':'http://www.sitemaps.org/schemas/sitemap/0.9'}
 sitemap=[n.text for n in ET.parse(D/'sitemap.xml').findall('s:url/s:loc',ns)]
 expected=[base+r['path'] for r in report['routes'] if r['indexable']]
+if os.environ.get('CONTEXT')=='production' and len(expected)!=51:errors.append('Producción debe tener 51 páginas indexables, no un sitemap vacío')
 if set(sitemap)!=set(expected) or len(sitemap)!=len(set(sitemap)):errors.append('Sitemap no coincide con páginas indexables')
 allrows=json.loads((D/'assets/municipios.json').read_text())
 muni=json.loads((R/'data/municipalities.json').read_text())

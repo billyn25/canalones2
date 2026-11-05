@@ -37,3 +37,31 @@ Antes de anunciar la web pública deben conectarse dominio y alojamiento, compro
 - https://developers.google.com/search/docs/crawling-indexing/consolidate-duplicate-urls
 
 Evitar contenido masivo sin valor es un criterio de elaboración; no existe un umbral de similitud que garantice posicionamiento ni una forma de asegurar que Google no desindexe una web.
+
+## Segunda auditoría — 5 de noviembre de 2026
+
+Alcance: código de `main` en GitHub (punto de partida `e94f0e4e5ebfe705b7059ff8289a5c3d6dd3a75b`), HTML generado y documentación oficial de Google y Schema.org. No se pudo verificar el dominio público desde este entorno: tanto el servicio de búsqueda como la conexión HTTP fallaron. El error local fue un timeout del proxy; no demuestra que el dominio esté caído, sin DNS o penalizado. No se ha accedido a Search Console.
+
+### Hallazgos corregidos
+
+1. **Cobertura de Service demasiado amplia en provincias.** Las fichas provinciales heredaban las seis provincias, aunque la página trataba de una sola. Ahora cada provincia marca solo su territorio y cada principal marca exactamente los municipios de su lista visible. Se enlaza WebPage con su servicio principal.
+2. **Posible publicación accidental sin indexación.** Antes, `INDEXABLE=false` podía generar toda la web con `noindex` y un sitemap vacío sin que el chequeo lo rechazase. Ahora producción declara `INDEXABLE=true`; el build cancela la publicación si detecta producción con `noindex` global o dominio canónico distinto del configurado. Las vistas previas siguen fuera del índice.
+3. **Coherencia de dirección visible y datos estructurados.** La dirección facilitada y confirmada por el titular aparece ahora en el pie, además de las páginas legales, coincidiendo con el JSON-LD. El nombre completo sigue únicamente en las páginas legales.
+
+### Comprobaciones realizadas
+
+- 53 páginas HTML; 51 comerciales/editoriales indexables y dos legales fuera del sitemap.
+- Los 934 municipios están asignados una sola vez; enlaces y anclas existen.
+- Sin enlaces internos rotos ni páginas huérfanas en el HTML generado.
+- Títulos y descripciones únicos, una canónica y un H1 por página.
+- Sin valoraciones falsas, plazos 24 horas inventados, oficinas ficticias por localidad, contenido oculto para buscadores o diferencias por user-agent.
+- Los bloques de navegación, formulario, servicios y algunas explicaciones se comparten entre páginas; no se ha usado una puntuación de similitud como supuesto umbral de Google.
+- Build de producción indexable: comprobado; producción con noindex global: rechazada; producción con host canónico equivocado: rechazada; deploy preview sin indexación: comprobado. Las pruebas se ejecutaron en copias temporales para conservar intacta la salida de producción.
+
+### Riesgos y límites que permanecen
+
+- Las páginas locales aportan consejos de consulta distintos y cobertura territorial; no hay trabajos locales documentados, fotos propias ni testimonios verificables. Los consejos generales adaptados a una localidad no equivalen a prueba de experiencia allí. Añadir documentación real y confirmar condiciones comerciales es el siguiente trabajo editorial útil, antes de multiplicar páginas.
+- Esta web no se ha comparado íntegramente con la web anterior. No se ha determinado si son negocios distintos o dos webs del mismo servicio. Si representan el mismo negocio, conviene valorar una presencia principal en vez de clonar ofertas y contenido en varios dominios.
+- No se han comprobado estados HTTP reales, DNS, TLS, host principal, reglas de cuenta en Netlify, X-Robots-Tag externos, tiempos de carga de producción ni Core Web Vitals de campo. Las reglas del alojamiento y sus controles de acceso pueden bloquear el sitio aunque el HTML sea correcto.
+- Solo Search Console puede confirmar el estado de acciones manuales, seguridad y URLs inspeccionadas de esa propiedad. La auditoría del código no acredita que Google haya rastreado, indexado o descartado una página.
+- No se garantiza ausencia futura de penalizaciones ni posiciones. La política de Google se refiere al valor y propósito del contenido, no a un porcentaje de similitud ni a ocultar el uso de herramientas.

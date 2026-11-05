@@ -2,6 +2,9 @@
   command = "python3 build.py && python3 scripts/check_site.py"
   publish = "dist"
 
+[context.production.environment]
+  INDEXABLE = "true"
+
 [context.deploy-preview.environment]
   INDEXABLE = "false"
 
