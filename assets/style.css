@@ -41,3 +41,5 @@
 @media(max-width:650px){header nav{flex-wrap:wrap;gap:8px 14px}.work-gallery{padding-top:45px;padding-bottom:45px}.work-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:22px 14px}.work-photo img{height:240px}.work-photo figcaption h3{font-size:20px}.work-photo figcaption p{font-size:12px}.work-gallery.compact .work-photo:last-child{grid-column:1/-1}.work-gallery.compact .work-photo:last-child img{height:280px}.photo-stage{grid-template-columns:40px minmax(0,1fr) 40px;gap:5px}.photo-dialog{padding:10px;max-height:92vh}.photo-stage img{max-height:64vh}.photo-dialog button{min-width:40px;padding:7px}.photo-caption{font-size:12px}.contact .small{font-size:12px;line-height:1.7}}
 @media(max-width:380px){.work-grid{grid-template-columns:1fr}.work-gallery.compact .work-photo:last-child{grid-column:auto}.work-photo img{height:300px}}
 @media(prefers-reduced-motion:reduce){.work-photo img{transition:none}}
+
+.local-content .roof-repairs{grid-column:1/-1;border-top:1px solid #253e3233;padding-top:30px}.roof-repairs p{max-width:860px}
