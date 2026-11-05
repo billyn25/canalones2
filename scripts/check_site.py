@@ -80,7 +80,8 @@ for p in pages:
 ns={'s':'http://www.sitemaps.org/schemas/sitemap/0.9'}
 sitemap=[n.text for n in ET.parse(D/'sitemap.xml').findall('s:url/s:loc',ns)]
 expected=[base+r['path'] for r in report['routes'] if r['indexable']]
-if os.environ.get('CONTEXT')=='production' and len(expected)!=51:errors.append('Producción debe tener 51 páginas indexables, no un sitemap vacío')
+expected_count=len(json.loads((R/'data/hubs.json').read_text()))+13
+if os.environ.get('CONTEXT')=='production' and len(expected)!=expected_count:errors.append(f'Producción debe tener {expected_count} páginas indexables, no un sitemap vacío')
 if set(sitemap)!=set(expected) or len(sitemap)!=len(set(sitemap)):errors.append('Sitemap no coincide con páginas indexables')
 allrows=json.loads((D/'assets/municipios.json').read_text())
 muni=json.loads((R/'data/municipalities.json').read_text())

@@ -11,7 +11,7 @@ python3 build.py
 python3 scripts/check_site.py
 ```
 
-`dist/` es el directorio que se publica. Contiene 53 páginas HTML: inicio, seis provincias, 38 municipios principales, cuatro servicios, dos guías y dos páginas legales. El sitemap contiene las 51 páginas comerciales/editoriales. Las páginas legales llevan `noindex,follow` y siguen accesibles desde el pie.
+`dist/` es el directorio que se publica. Contiene 75 páginas HTML: inicio, seis provincias, 60 municipios principales, cuatro servicios, dos guías y dos páginas legales. El sitemap contiene las 73 páginas comerciales/editoriales. Las páginas legales llevan `noindex,follow` y siguen accesibles desde el pie.
 
 ## Netlify
 

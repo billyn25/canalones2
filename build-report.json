@@ -1,8 +1,8 @@
 {
   "site_url": "https://limpiezacanalonestejadosurgente.es",
-  "pages": 53,
-  "sitemap_pages": 51,
-  "principal_municipalities": 38,
+  "pages": 75,
+  "sitemap_pages": 73,
+  "principal_municipalities": 60,
   "covered_municipalities": 934,
   "provinces": {
     "Álava": 51,
@@ -237,6 +237,116 @@
       "path": "/cantabria/potes/",
       "indexable": true,
       "title": "Limpieza de tejados y canalones en Potes | Fuentes"
+    },
+    {
+      "path": "/vizcaya/bermeo/",
+      "indexable": true,
+      "title": "Limpieza de tejados y canalones en Bermeo | Fuentes"
+    },
+    {
+      "path": "/vizcaya/leioa/",
+      "indexable": true,
+      "title": "Limpieza de tejados y canalones en Leioa | Fuentes"
+    },
+    {
+      "path": "/vizcaya/santurtzi/",
+      "indexable": true,
+      "title": "Limpieza de tejados y canalones en Santurtzi | Fuentes"
+    },
+    {
+      "path": "/alava/iruna-de-oca/",
+      "indexable": true,
+      "title": "Limpieza de tejados y canalones en Iruña de Oca | Fuentes"
+    },
+    {
+      "path": "/alava/oyon-oion/",
+      "indexable": true,
+      "title": "Limpieza de tejados y canalones en Oyón-Oion | Fuentes"
+    },
+    {
+      "path": "/guipuzcoa/hernani/",
+      "indexable": true,
+      "title": "Limpieza de tejados y canalones en Hernani | Fuentes"
+    },
+    {
+      "path": "/guipuzcoa/hondarribia/",
+      "indexable": true,
+      "title": "Limpieza de tejados y canalones en Hondarribia | Fuentes"
+    },
+    {
+      "path": "/guipuzcoa/bergara/",
+      "indexable": true,
+      "title": "Limpieza de tejados y canalones en Bergara | Fuentes"
+    },
+    {
+      "path": "/guipuzcoa/errenteria/",
+      "indexable": true,
+      "title": "Limpieza de tejados y canalones en Errenteria | Fuentes"
+    },
+    {
+      "path": "/guipuzcoa/azpeitia/",
+      "indexable": true,
+      "title": "Limpieza de tejados y canalones en Azpeitia | Fuentes"
+    },
+    {
+      "path": "/burgos/villarcayo/",
+      "indexable": true,
+      "title": "Limpieza de tejados y canalones en Villarcayo | Fuentes"
+    },
+    {
+      "path": "/burgos/espinosa-de-los-monteros/",
+      "indexable": true,
+      "title": "Limpieza de tejados y canalones en Espinosa de los Monteros | Fuentes"
+    },
+    {
+      "path": "/burgos/roa/",
+      "indexable": true,
+      "title": "Limpieza de tejados y canalones en Roa | Fuentes"
+    },
+    {
+      "path": "/burgos/melgar-de-fernamental/",
+      "indexable": true,
+      "title": "Limpieza de tejados y canalones en Melgar de Fernamental | Fuentes"
+    },
+    {
+      "path": "/segovia/cantalejo/",
+      "indexable": true,
+      "title": "Limpieza de tejados y canalones en Cantalejo | Fuentes"
+    },
+    {
+      "path": "/segovia/carbonero-el-mayor/",
+      "indexable": true,
+      "title": "Limpieza de tejados y canalones en Carbonero el Mayor | Fuentes"
+    },
+    {
+      "path": "/segovia/palazuelos-de-eresma/",
+      "indexable": true,
+      "title": "Limpieza de tejados y canalones en Palazuelos de Eresma | Fuentes"
+    },
+    {
+      "path": "/segovia/la-lastrilla/",
+      "indexable": true,
+      "title": "Limpieza de tejados y canalones en La Lastrilla | Fuentes"
+    },
+    {
+      "path": "/cantabria/camargo/",
+      "indexable": true,
+      "title": "Limpieza de tejados y canalones en Camargo | Fuentes"
+    },
+    {
+      "path": "/cantabria/santona/",
+      "indexable": true,
+      "title": "Limpieza de tejados y canalones en Santoña | Fuentes"
+    },
+    {
+      "path": "/cantabria/suances/",
+      "indexable": true,
+      "title": "Limpieza de tejados y canalones en Suances | Fuentes"
+    },
+    {
+      "path": "/cantabria/cabezon-de-la-sal/",
+      "indexable": true,
+      "title": "Limpieza de tejados y canalones en Cabezón de la Sal | Fuentes"
     },
     {
       "path": "/servicios/limpieza-canalones/",

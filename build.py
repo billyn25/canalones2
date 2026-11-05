@@ -75,7 +75,7 @@ HOME_EXTRA_CODES={
 }
 zonecards=''
 for src,(display,ps,pc) in PROVINCES.items():
- selected=[ALL[c] for c in HUBS if c.startswith(pc)]+[ALL[c] for c in HOME_EXTRA_CODES[pc]]
+ selected=[ALL[c] for c in dict.fromkeys([c for c in HUBS if c.startswith(pc)]+HOME_EXTRA_CODES[pc])]
  assert len(selected)==12 and len({r[1] for r in selected})==12
  townlinks=[]
  for row in selected:

@@ -65,3 +65,12 @@ Alcance: código de `main` en GitHub (punto de partida `e94f0e4e5ebfe705b7059ff8
 - No se han comprobado estados HTTP reales, DNS, TLS, host principal, reglas de cuenta en Netlify, X-Robots-Tag externos, tiempos de carga de producción ni Core Web Vitals de campo. Las reglas del alojamiento y sus controles de acceso pueden bloquear el sitio aunque el HTML sea correcto.
 - Solo Search Console puede confirmar el estado de acciones manuales, seguridad y URLs inspeccionadas de esa propiedad. La auditoría del código no acredita que Google haya rastreado, indexado o descartado una página.
 - No se garantiza ausencia futura de penalizaciones ni posiciones. La política de Google se refiere al valor y propósito del contenido, no a un porcentaje de similitud ni a ocultar el uso de herramientas.
+
+
+## Ampliación de municipios principales — 5 de noviembre de 2026
+
+Se amplían de 38 a 60 las páginas principales: Vizcaya 12, Álava 7, Guipúzcoa 11, Burgos 11, Segovia 9 y Cantabria 10. Se mantienen los 934 municipios, repartidos de nuevo por cercanía dentro de cada provincia. El inicio conserva 12 municipios visibles por provincia, ahora con enlaces directos a las nuevas páginas principales cuando corresponde.
+
+Se conservan todas las rutas de páginas anteriores. Los destinos a pueblos pequeños se regeneran para apuntar a su zona actual. Las nuevas fichas cuentan con introducción, aspecto de revisión, datos para la consulta y pregunta propios; no contienen trabajos locales ni testimonios inventados. El tamaño final es de 75 páginas, con 73 URLs comerciales/editoriales en el sitemap y dos páginas legales.
+
+El control de producción calcula el número esperado de páginas a partir del catálogo de principales para admitir ampliaciones legítimas sin permitir un sitemap vacío. Se han comprobado enlaces, anclas, cobertura, canónicas, títulos, descripciones, datos estructurados territoriales y ausencia de páginas huérfanas sobre la nueva salida de producción.
