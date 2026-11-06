@@ -169,6 +169,7 @@ for h in HUBS.values():
 (OUT/'assets/municipios.json').write_text(json.dumps(search,ensure_ascii=False,separators=(',',':')))
 indexable=[r for r in ROUTES if r['indexable']]
 (OUT/'sitemap.xml').write_text('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'+''.join('<url><loc>'+full(r['path'])+'</loc></url>' for r in indexable)+'</urlset>')
+(OUT/'ads.txt').write_text('google.com, pub-1569998172644306, DIRECT, f08c47fec0942fa0\n')
 (OUT/'robots.txt').write_text('User-agent: *\nAllow: /\nSitemap: '+BASE+'/sitemap.xml\n')
 (OUT/'_redirects').write_text('/index.html / 301\n')
 (OUT/'_headers').write_text('/*\n  X-Content-Type-Options: nosniff\n  Referrer-Policy: strict-origin-when-cross-origin\n  Permissions-Policy: camera=(), microphone=(), geolocation=()\n/assets/*\n  Cache-Control: public, max-age=86400\n')
