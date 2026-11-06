@@ -4,7 +4,7 @@
 
 Archivo de origen: https://github.com/ManuelCebreiro/spanish-cities-info/blob/main/src/data/cities.json
 
-Consulta: 5 de noviembre de 2026. Se conserva el subconjunto de las provincias 01, 09, 20, 39, 40 y 48. Según la documentación del proveedor, los nombres y códigos se reconcilian con la relación del INE a 1 de enero de 2026; las coordenadas son centroides geométricos del dataset `georef-spain-municipio` de Opendatasoft, con base IGN, bajo CC BY 4.0. No son posiciones de oficinas ni necesariamente el centro urbano. La descarga directa del fichero anual del INE no pudo verificarse en este entorno; se utilizó el conjunto publicado y documentado por su mantenedor.
+Consulta: 5 de noviembre de 2026. Se conserva el subconjunto de las provincias 01, 09, 20, 24, 39, 40 y 48. Según la documentación del proveedor, los nombres y códigos se reconcilian con la relación del INE a 1 de enero de 2026; las coordenadas son centroides geométricos del dataset `georef-spain-municipio` de Opendatasoft, con base IGN, bajo CC BY 4.0. No son posiciones de oficinas ni necesariamente el centro urbano. La descarga directa del fichero anual del INE no pudo verificarse en este entorno; se utilizó el conjunto publicado y documentado por su mantenedor.
 
 - https://github.com/ManuelCebreiro/spanish-cities-info
 - https://www.ine.es/dyngs/INEbase/operacion.htm?c=Estadistica_C&cid=1254736177031&idp=1254735976614&menu=ultiDatos
@@ -47,3 +47,7 @@ El usuario facilita diez fotografías y las identifica como trabajos reales del 
 ## Ampliación de fotografías propias · 6 de noviembre de 2026
 
 Se incorporan nueve fotografías adicionales facilitadas y confirmadas por el usuario como trabajos reales. La galería reúne 19 fotografías; se describen los elementos visibles sin atribuir municipios ni resultados de reparación no documentados. Copias WebP y miniaturas sin alterar las escenas.
+
+## León y fotografías adicionales · 6 de noviembre de 2026
+
+211 municipios de León del mismo dataset; total contrastado con https://www.dipuleon.es/municipios/ayuntamientos-de-la-provincia/ . Se incorporan 12 zonas principales, entre ellas Boñar. El usuario identifica las dos nuevas fotos como trabajos reales de Boñar y otras localidades, sin precisar la ubicación de cada imagen. No se identifica cada foto con una dirección ni se presenta la humedad como una reparación terminada. Galería total: 21 imágenes.

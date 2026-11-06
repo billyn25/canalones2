@@ -11,7 +11,7 @@ python3 build.py
 python3 scripts/check_site.py
 ```
 
-`dist/` es el directorio que se publica. Contiene 76 páginas HTML: inicio, seis provincias, 60 municipios principales, cuatro servicios, una galería de trabajos, dos guías y dos páginas legales. El sitemap contiene las 74 páginas comerciales/editoriales. Las páginas legales llevan `noindex,follow` y siguen accesibles desde el pie.
+`dist/` es el directorio que se publica. Contiene 89 páginas HTML: inicio, siete provincias, 72 municipios principales, cuatro servicios, una galería de trabajos, dos guías y dos páginas legales. El sitemap contiene las 87 páginas comerciales/editoriales. Las páginas legales llevan `noindex,follow` y siguen accesibles desde el pie.
 
 ## Netlify
 
@@ -23,9 +23,9 @@ Tras conectar dominio: comprobar HTTPS, redirección del alias, código 200 de l
 
 ## Cobertura territorial
 
-934 municipios: Vizcaya 113, Álava 51, Guipúzcoa 88, Burgos 371, Segovia 209, Cantabria 102. Se conservan los nombres y códigos de la fuente; algunos municipios disponen además de un nombre comercial conocido y alias de búsqueda. No es un nomenclátor de todas las aldeas, barrios o entidades menores: estas se atienden dentro de su municipio, previa consulta.
+1145 municipios: Vizcaya 113, Álava 51, Guipúzcoa 88, Burgos 371, Segovia 209, Cantabria 102, León 211. Se conservan los nombres y códigos de la fuente; algunos municipios disponen además de un nombre comercial conocido y alias de búsqueda. No es un nomenclátor de todas las aldeas, barrios o entidades menores: estas se atienden dentro de su municipio, previa consulta.
 
-Cada municipio está asignado una sola vez a una página principal de su provincia según la cercanía entre centroides, usando coordenadas como orientación, no como distancias por carretera ni rutas de trabajo confirmadas. Cada principal incluye contenido propio y su lista de cobertura. Los pequeños enlazan a anclas reales en esa lista, sin crear páginas nuevas. El buscador comprende los 934 municipios. Las provincias y listas de cobertura están en el HTML y pueden leerse sin JavaScript.
+Cada municipio está asignado una sola vez a una página principal de su provincia según la cercanía entre centroides, usando coordenadas como orientación, no como distancias por carretera ni rutas de trabajo confirmadas. Cada principal incluye contenido propio y su lista de cobertura. Los pequeños enlazan a anclas reales en esa lista, sin crear páginas nuevas. El buscador comprende los 1145 municipios. Las provincias y listas de cobertura están en el HTML y pueden leerse sin JavaScript.
 
 Fuentes, licencia y limitaciones de los datos en `data/SOURCES.md`. No se asignan oficinas a cada localidad, ni se inventan trabajos, reseñas o cifras de experiencia.
 
@@ -51,4 +51,4 @@ Producción en Netlify fija `INDEXABLE=true`. Si el entorno de producción inten
 
 ## Fotografías de trabajos
 
-`data/photos.json` describe las 19 fotografías aportadas por el titular. Se publican como trabajos y revisiones propios, con descripciones de los elementos visibles, sin asignar una localidad, fecha de ejecución, intervención completada o un antes/después que no se haya confirmado. Las imágenes figuran en inicio, servicios, provincias y principales; `/trabajos/` reúne las 19. Los originales aportados no se retocan: se generan copias WebP y miniaturas para la web. Los enlaces a fotografías funcionan sin JavaScript; la ampliación en diálogo añade cierre, navegación con botones y teclado y recuperación del foco.
+`data/photos.json` describe las 21 fotografías aportadas por el titular. Se publican como trabajos y revisiones propios, con descripciones de los elementos visibles, sin asignar una localidad, fecha de ejecución, intervención completada o un antes/después que no se haya confirmado. Las imágenes figuran en inicio, servicios, provincias y principales; `/trabajos/` reúne las 21. Los originales aportados no se retocan: se generan copias WebP y miniaturas para la web. Los enlaces a fotografías funcionan sin JavaScript; la ampliación en diálogo añade cierre, navegación con botones y teclado y recuperación del foco.

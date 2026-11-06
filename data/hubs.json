@@ -573,5 +573,125 @@
     "ask": "Indica la fecha aproximada de la última limpieza y si el agua vuelve a rebosar por el mismo punto.",
     "question": "¿Una protección contra hojas elimina el mantenimiento?",
     "answer": "No. También puede acumular residuos y necesitar limpieza. Su conveniencia se valora según el canalón, las salidas y el entorno del inmueble."
+  },
+  "24089": {
+    "name": "León",
+    "slug": "leon",
+    "intro": "Si la consulta es por un edificio de viviendas en León, empieza por indicar qué parte del tejado o del canalón necesita revisión y quién puede facilitar el acceso. Puedes pedir limpieza de la cubierta, de los desagües o valorar una gotera.",
+    "focus": "Organizar la revisión en una comunidad",
+    "detail": "Una mancha en la última planta puede necesitar una revisión desde el exterior y otra desde el interior. Preparar ambas vistas ayuda a relacionar la zona afectada con los remates y el recorrido del agua.",
+    "ask": "Indica la planta afectada, si existe acceso comunitario y quién coordina la visita.",
+    "question": "¿Puede solicitar el presupuesto la administración de una comunidad?",
+    "answer": "Sí. Puede preparar la consulta con la dirección del edificio y las zonas afectadas. Se acuerdan el acceso y el alcance antes de concretar el trabajo."
+  },
+  "24115": {
+    "name": "Ponferrada",
+    "slug": "ponferrada",
+    "intro": "Para presupuestar una limpieza de tejado o canalones en Ponferrada, interesa conocer el material y cómo se puede revisar el inmueble. Si el agua se pierde por una junta, cuéntanos ese detalle para valorar también una reparación.",
+    "focus": "Seguir el recorrido hasta la bajante",
+    "detail": "El agua puede acumularse en un encuentro antes de llegar al canalón. Una fotografía de conjunto permite localizar las salidas y distinguir una acumulación superficial de un problema de evacuación.",
+    "ask": "Señala dónde se retiene el agua y dónde empieza la bajante.",
+    "question": "¿Se pueden revisar canalón y bajante en la misma consulta?",
+    "answer": "Sí. Explica si rebosa el canalón o si el agua no baja. El presupuesto concretará los tramos y la revisión o desatasco que corresponda."
+  },
+  "24008": {
+    "name": "Astorga",
+    "slug": "astorga",
+    "intro": "En Astorga puedes consultar limpieza de tejados, canalones o reparación de tejas. Si la cubierta tiene piezas envejecidas, una vista general y fotos del deterioro ayudan a decidir qué debe revisarse antes de limpiar.",
+    "focus": "Separar la suciedad de las piezas dañadas",
+    "detail": "Las tejas rotas, desplazadas o con remates sueltos deben valorarse por separado de la limpieza. Retirar residuos no sustituye la reparación de los puntos que permiten entrar agua.",
+    "ask": "Indica el material y si se ven tejas partidas, piezas sueltas o reparaciones anteriores.",
+    "question": "¿Puedo pedir revisión de tejas además de limpieza?",
+    "answer": "Sí. Describe los daños visibles y se diferencian en el presupuesto la limpieza y las reparaciones necesarias."
+  },
+  "24010": {
+    "name": "La Bañeza",
+    "slug": "la-baneza",
+    "intro": "Si buscas limpieza de canalones en La Bañeza, dinos si necesitas un tramo o todo el perímetro. También puedes consultar la limpieza del tejado o una gotera, con una foto del exterior que permita entender la cubierta.",
+    "focus": "Definir los tramos antes de presupuestar",
+    "detail": "Un canalón puede recorrer varias fachadas o cambiar de altura. Identificar cada tramo evita confundir una limpieza puntual con el mantenimiento de todo el inmueble.",
+    "ask": "Muestra las fachadas afectadas y los metros aproximados, si los conoces.",
+    "question": "¿Se puede limpiar solo el canalón de una fachada?",
+    "answer": "Sí. Se puede consultar una intervención parcial; hay que identificar el tramo y comprobar cómo conecta con las salidas y bajantes."
+  },
+  "24014": {
+    "name": "Bembibre",
+    "slug": "bembibre",
+    "intro": "Para una consulta de tejados y canalones en Bembibre, explica qué ocurre al llover y desde dónde se observa. El mantenimiento de los desagües y la reparación de una entrada de agua se valoran según su causa.",
+    "focus": "Uniones que pierden agua",
+    "detail": "Si el agua gotea por una junta, ayuda una foto de esa unión y otra del tramo completo. El estado del material y los soportes condiciona si se puede reparar de forma localizada.",
+    "ask": "Cuenta si pierde por una unión, por el fondo o si rebosa por arriba.",
+    "question": "¿Hay que cambiar todo el canalón si pierde por una junta?",
+    "answer": "No siempre. Se revisa el estado de la unión y los tramos próximos antes de proponer reparar o sustituir."
+  },
+  "24202": {
+    "name": "Villablino",
+    "slug": "villablino",
+    "intro": "Puedes solicitar limpieza de tejados o canalones en Villablino y consultar piezas desplazadas o goteras. Antes de organizar una revisión necesitamos conocer la ubicación, el material y las condiciones de acceso.",
+    "focus": "Valorar el acceso antes de intervenir",
+    "detail": "La pendiente, la altura y el espacio alrededor del inmueble determinan los medios necesarios para revisar la cubierta. Enviar una vista general orienta mejor que una foto aislada del daño.",
+    "ask": "Indica si hay salida interior al tejado y espacio libre junto a las fachadas.",
+    "question": "¿Hace falta subir para enviar fotos del tejado?",
+    "answer": "No. Envía las imágenes que puedas tomar desde un lugar seguro. Si hace falta una inspección, se acuerda cómo realizarla."
+  },
+  "24056": {
+    "name": "Cistierna",
+    "slug": "cistierna",
+    "intro": "Para una limpieza de tejados y canalones en Cistierna, diferencia si ves residuos acumulados o si ya está entrando agua. Puedes pedir uno de los servicios por separado y añadir la revisión de remates o bajantes.",
+    "focus": "Encuentros entre distintas partes de la cubierta",
+    "detail": "Las uniones con paredes, anexos o cambios de faldón requieren describir dónde aparece el agua. La mancha interior por sí sola no confirma el punto de entrada.",
+    "ask": "Muestra la zona afectada y su relación con paredes, chimeneas o cubiertas contiguas.",
+    "question": "¿Se revisan los encuentros si aparece una gotera?",
+    "answer": "Sí, cuando la revisión lo requiera. Se comprueba el origen para concretar qué parte necesita reparación."
+  },
+  "24139": {
+    "name": "Sahagún",
+    "slug": "sahagun",
+    "intro": "En Sahagún puedes consultar el mantenimiento del tejado y de sus canalones para una casa, comunidad o nave. Indica qué superficies quieres incluir y si hay salidas donde el agua se queda retenida.",
+    "focus": "Concretar el mantenimiento de una nave",
+    "detail": "Una cubierta amplia puede tener varios recorridos de desagüe. Para presupuestar conviene identificar superficie, salidas y puntos afectados, además del acceso y el material.",
+    "ask": "Si es una nave, indica superficie aproximada, altura y número de desagües visibles.",
+    "question": "¿Se puede preparar un presupuesto para una nave?",
+    "answer": "Sí. Se necesita conocer la cubierta y sus desagües; una visita puede ser necesaria para concretar medidas, acceso y alcance."
+  },
+  "24188": {
+    "name": "Valencia de Don Juan",
+    "slug": "valencia-de-don-juan",
+    "intro": "Si el canalón rebosa o el tejado necesita limpieza en Valencia de Don Juan, prepara una foto general y explica cuándo sucede. Si hay humedad dentro, interesa revisar el desagüe y el estado de las piezas de cubierta.",
+    "focus": "Comparar lo que ocurre fuera y dentro",
+    "detail": "El momento en que aparece la mancha ayuda a preparar la revisión: durante la lluvia, después o con viento. No se da por hecho que una limpieza vaya a resolver cualquier filtración.",
+    "ask": "Describe cuánto tarda en aparecer el agua y si hay goteo o solo una mancha.",
+    "question": "¿Puedo consultar una gotera aunque no se vea desde fuera?",
+    "answer": "Sí. Explica dónde aparece y con qué lluvia; las fotos interiores y la información del inmueble ayudan a preparar la revisión."
+  },
+  "24021": {
+    "name": "Boñar",
+    "slug": "bonar",
+    "intro": "Atendemos consultas de limpieza de tejados y canalones en Boñar y municipios de esta zona. Si hay goteras o tejas dañadas, cuéntanos qué has observado para preparar una revisión y separar la limpieza de la reparación.",
+    "focus": "Humedades que se ven dentro de casa",
+    "detail": "Mostramos fotografías propias de trabajos de Boñar y otras localidades. Para preparar una consulta por humedad, una imagen del techo y otra del exterior ayudan a relacionar la zona afectada con la cubierta y sus desagües.",
+    "ask": "Indica dónde aparece la humedad, cuándo empezó y si afecta al alero o a una habitación.",
+    "question": "¿Puedo pedir solo reparación de una gotera en Boñar?",
+    "answer": "Sí. Puedes consultar una gotera sin contratar limpieza. Se revisa su origen y se concreta la intervención, el acceso y la disponibilidad."
+  },
+  "24142": {
+    "name": "San Andrés del Rabanedo",
+    "slug": "san-andres-del-rabanedo",
+    "intro": "En San Andrés del Rabanedo puedes pedir limpieza de tejados, de canalones o consultar una reparación. Si hay varios aleros o patios, señala los tramos afectados para preparar un presupuesto que recoja lo que necesitas.",
+    "focus": "Canalones sobre patios y zonas interiores",
+    "detail": "Un tramo que queda hacia un patio puede tener un acceso diferente al de la fachada principal. Indicar esa diferencia ayuda a valorar los medios de trabajo y a identificar todo el recorrido.",
+    "ask": "Envía una vista del patio si lo hay y señala desde dónde puede revisarse el alero.",
+    "question": "¿Se pueden incluir los canalones de un patio interior?",
+    "answer": "Sí. Hay que conocer su recorrido, altura y acceso para valorar el trabajo e incluir los tramos correspondientes."
+  },
+  "24222": {
+    "name": "Villaquilambre",
+    "slug": "villaquilambre",
+    "intro": "Para una casa o comunidad en Villaquilambre, puedes solicitar limpieza de tejados y canalones juntos o por separado. Explica si la consulta es por suciedad, una fuga en el desagüe o una filtración interior.",
+    "focus": "Preparar un presupuesto conjunto sin mezclar trabajos",
+    "detail": "La limpieza de la cubierta, los canalones y las reparaciones tienen alcances distintos. Conviene indicar qué elementos se incluyen y cómo se retiran los residuos para revisar también las salidas afectadas.",
+    "ask": "Dinos si quieres cubierta, canalones o ambos y si hay algún punto que pierde agua.",
+    "question": "¿El presupuesto conjunto detalla cada trabajo?",
+    "answer": "Debe concretar qué superficies, tramos y reparaciones incluye. Puedes solicitar solo el servicio que necesites."
   }
 }

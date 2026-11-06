@@ -257,5 +257,32 @@
     "thumbnail": "trabajos/borde-cubierta-small.webp",
     "width": 864,
     "height": 1536
+  },
+  {
+    "id": "revision-canalon-red",
+    "title": "Trabajo junto al canalón",
+    "caption": "Trabajador con arnés y red de protección junto a un canalón de cubierta.",
+    "alt": "Trabajador con arnés y red de protección junto a un canalón de cubierta.",
+    "tags": [
+      "canalones",
+      "tejados"
+    ],
+    "file": "trabajos/revision-canalon-red.webp",
+    "thumbnail": "trabajos/revision-canalon-red-small.webp",
+    "width": 1536,
+    "height": 864
+  },
+  {
+    "id": "humedad-techo",
+    "title": "Humedad en un techo interior",
+    "caption": "Manchas y desprendimientos del revestimiento en un techo interior.",
+    "alt": "Manchas y desprendimientos del revestimiento en un techo interior.",
+    "tags": [
+      "goteras"
+    ],
+    "file": "trabajos/humedad-techo.webp",
+    "thumbnail": "trabajos/humedad-techo-small.webp",
+    "width": 1152,
+    "height": 1536
   }
 ]

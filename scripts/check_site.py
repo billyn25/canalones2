@@ -33,7 +33,7 @@ class Page(HTMLParser):
   if tag=='footer':self.inFooter=False
   if tag=='script' and self.scripts:
    self.schema.append(json.loads(self.schemaText));self.scripts=False
-expected_provinces={'vizcaya':'Vizcaya','alava':'Álava','guipuzcoa':'Guipúzcoa','burgos':'Burgos','segovia':'Segovia','cantabria':'Cantabria'}
+expected_provinces={'vizcaya':'Vizcaya','alava':'Álava','guipuzcoa':'Guipúzcoa','burgos':'Burgos','segovia':'Segovia','cantabria':'Cantabria','leon':'León'}
 coverage_rows=json.loads((D/'assets/municipios.json').read_text())
 for route in report['routes']:
  p=route['path'];text=(D/p.strip('/')/'index.html').read_text();a=Page(text);pages[p]=a
@@ -89,12 +89,12 @@ for p in pages:
 ns={'s':'http://www.sitemaps.org/schemas/sitemap/0.9'}
 sitemap=[n.text for n in ET.parse(D/'sitemap.xml').findall('s:url/s:loc',ns)]
 expected=[base+r['path'] for r in report['routes'] if r['indexable']]
-expected_count=len(json.loads((R/'data/hubs.json').read_text()))+14
+expected_count=len(json.loads((R/'data/hubs.json').read_text()))+len(expected_provinces)+8
 if os.environ.get('CONTEXT')=='production' and len(expected)!=expected_count:errors.append(f'Producción debe tener {expected_count} páginas indexables, no un sitemap vacío')
 if set(sitemap)!=set(expected) or len(sitemap)!=len(set(sitemap)):errors.append('Sitemap no coincide con páginas indexables')
 allrows=json.loads((D/'assets/municipios.json').read_text())
 muni=json.loads((R/'data/municipalities.json').read_text())
-if len(allrows)!=sum(len(v) for v in muni.values()) or len(allrows)!=934:errors.append('Cobertura incompleta')
+if len(allrows)!=sum(len(v) for v in muni.values()) or len(allrows)!=1145:errors.append('Cobertura incompleta')
 for row in allrows:
  u=urlparse(row['url'])
  if u.path not in pages or (u.fragment and u.fragment not in pages[u.path].ids):errors.append('Municipio sin destino: '+row['name'])
@@ -107,5 +107,5 @@ if any('/* /index.html' in p.read_text() for p in [D/'_redirects']):errors.appen
 if not (D/'404.html').exists():errors.append('Falta 404')
 if errors:
  print('\n'.join(errors));raise SystemExit(1)
-print(f'OK: {len(pages)} páginas, {len(sitemap)} URLs de sitemap, 934 municipios, enlaces y anclas válidos, sin páginas huérfanas, títulos/descripciones únicos y nombre personal solo en legales.')
+print(f'OK: {len(pages)} páginas, {len(sitemap)} URLs de sitemap, 1145 municipios, enlaces y anclas válidos, sin páginas huérfanas, títulos/descripciones únicos y nombre personal solo en legales.')
 
