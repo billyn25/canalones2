@@ -13,7 +13,8 @@ if(form){
  });
  document.querySelectorAll('[data-locality]').forEach(link=>link.addEventListener('click',()=>{
   form.elements.town.value=link.dataset.locality;
-  document.querySelector('#form-status').textContent='Municipio seleccionado: '+link.dataset.locality+'.';
+  if(link.dataset.service)form.elements.service.value=link.dataset.service;
+  document.querySelector('#form-status').textContent='Municipio seleccionado: '+link.dataset.locality+(link.dataset.service?' · '+link.dataset.service:'')+'.';
  }));
  const fillFromAnchor=()=>{
   if(!/^#municipio-\d{5}$/.test(location.hash))return;

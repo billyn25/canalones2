@@ -64,3 +64,14 @@
  .photo-zoom .arrow-icon{width:12px;height:12px}.site-footer{padding-bottom:25px}
 }
 @media(max-width:360px){header .brand{font-size:27px}header .call{font-size:12px}header nav{font-size:10px}.urgency-bar{font-size:9px}.hero h1{font-size:34px}}
+
+/* Service selection within existing coverage pages. */
+.heading-area{display:block;font:normal .48em/1.4 Georgia,serif;letter-spacing:-.5px;color:#677b5a;margin-top:12px}
+.zone-intro{max-width:740px;font-size:14px}.zone-intro a{text-decoration:underline}
+.municipality-service-list{grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:30px}
+.municipality-service-list .municipality-service{padding:20px;border:1px solid #253e3233;border-radius:5px;scroll-margin-top:25px;min-width:0}
+.municipality-service h3{font-size:23px;line-height:1.25;margin:0 0 12px;overflow-wrap:anywhere}
+.municipality-service-list .municipality-services a{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:10px 0;font-size:12px;line-height:1.5;border-top:1px solid #253e321a}
+.municipality-services .arrow-icon{width:14px;height:14px;margin-left:auto}
+@media(max-width:1000px){.municipality-service-list{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:650px){.heading-area{font-size:.55em}.zone-intro{font-size:14px}.municipality-service-list{grid-template-columns:1fr;gap:12px}.municipality-service-list .municipality-service{padding:18px}.municipality-service-list .municipality-services a{min-height:44px;font-size:14px}.municipality-service h3{font-size:24px}}
