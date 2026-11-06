@@ -8,7 +8,7 @@ if(form){
   const message=`Hola, quiero consultar un presupuesto.\nMunicipio: ${fields.get('town')}\nServicio: ${fields.get('service')}\n${fields.get('details')||''}`;
   const url='https://wa.me/34641490536?text='+encodeURIComponent(message);
   const status=document.querySelector('#form-status');status.textContent='Consulta preparada. Revisa el mensaje en WhatsApp antes de enviarlo. ';
-  const fallback=document.createElement('a');fallback.href=url;fallback.target='_blank';fallback.rel='noopener';fallback.textContent='Abrir WhatsApp ↗';status.append(fallback);
+  const fallback=document.createElement('a');fallback.href=url;fallback.target='_blank';fallback.rel='noopener';fallback.textContent='Abrir WhatsApp';status.append(fallback);
   window.open(url,'_blank','noopener,noreferrer');
  });
  document.querySelectorAll('[data-locality]').forEach(link=>link.addEventListener('click',()=>{
@@ -44,7 +44,7 @@ if(search){
    const status=document.createElement('p');status.textContent=matches.length===0?'No encontramos ese nombre. Consulta el listado de tu provincia o escríbenos la localidad.':`${matches.length} ${matches.length===1?'municipio encontrado':'municipios encontrados'}${matches.length>12?'. Mostramos los 12 primeros; escribe más letras para afinar.':'.'}`;results.append(status);
    for(const row of matches.slice(0,12)){
     const link=document.createElement('a');link.href=row.url;
-    const title=document.createElement('strong');title.textContent=row.name+' ↗';
+    const title=document.createElement('strong');title.textContent=row.name;
     const detail=document.createElement('span');detail.textContent=`${row.province} · zona de ${row.zone}`;
     link.append(title,detail);results.append(link);
    }
@@ -87,12 +87,12 @@ if(workLinks.length&&typeof HTMLDialogElement!=='undefined'){
   const close=document.createElement('button');close.type='button';close.className='photo-close';close.textContent='Cerrar ×';close.addEventListener('click',()=>dialog.close());
   toolbar.append(counter,close);
   const stage=document.createElement('div');stage.className='photo-stage';
-  const previous=document.createElement('button');previous.type='button';previous.textContent='←';previous.setAttribute('aria-label','Fotografía anterior');previous.addEventListener('click',()=>showPhoto(current-1));
+  const previous=document.createElement('button');previous.type='button';previous.textContent='‹';previous.setAttribute('aria-label','Fotografía anterior');previous.addEventListener('click',()=>showPhoto(current-1));
   largeImage=document.createElement('img');
-  const next=document.createElement('button');next.type='button';next.textContent='→';next.setAttribute('aria-label','Fotografía siguiente');next.addEventListener('click',()=>showPhoto(current+1));
+  const next=document.createElement('button');next.type='button';next.textContent='›';next.setAttribute('aria-label','Fotografía siguiente');next.addEventListener('click',()=>showPhoto(current+1));
   stage.append(previous,largeImage,next);
   caption=document.createElement('p');caption.className='photo-caption';caption.setAttribute('aria-live','polite');
-  fullLink=document.createElement('a');fullLink.textContent='Abrir fotografía original optimizada ↗';fullLink.target='_blank';fullLink.rel='noopener';fullLink.className='photo-original';
+  fullLink=document.createElement('a');fullLink.textContent='Abrir fotografía original optimizada';fullLink.target='_blank';fullLink.rel='noopener';fullLink.className='photo-original';
   dialog.append(toolbar,stage,caption,fullLink);document.body.append(dialog);
   dialog.addEventListener('close',()=>{document.body.classList.remove('gallery-open');opener?.focus({preventScroll:true})});
   dialog.addEventListener('keydown',event=>{if(event.key==='ArrowLeft'){event.preventDefault();showPhoto(current-1)}if(event.key==='ArrowRight'){event.preventDefault();showPhoto(current+1)}});
