@@ -42,8 +42,8 @@
     "photo_caption": "Canalón junto al alero · fotografía propia.",
     "photo_ids": [
       "canalon-alero",
-      "residuos-encuentro",
-      "teja-vegetacion"
+      "canalon-metalico",
+      "residuos-encuentro"
     ]
   },
   {
@@ -90,7 +90,7 @@
     "photo_ids": [
       "tejas-suciedad",
       "teja-vegetacion",
-      "cubierta-ceramica"
+      "teja-rota-musgo"
     ]
   },
   {
@@ -99,8 +99,8 @@
     "tagline": "Primero, saber por dónde entra.",
     "description": "Revisión de goteras, tejas desplazadas, remates y encuentros de cubierta. Consulta la disponibilidad para valorar una entrada de agua.",
     "intro": "La mancha del techo muestra dónde se hace visible el agua, pero no siempre dónde entra. Para valorar una gotera interesa conocer cuándo aparece, con qué lluvia y si ya se reparó antes. Se revisan cubierta, remates y evacuación antes de proponer la actuación.",
-    "image": "trabajos/revision-alero.webp",
-    "alt": "Revestimiento desprendido en la cara inferior de un alero.",
+    "image": "trabajos/rastreles-lamina.webp",
+    "alt": "Tejas levantadas que dejan a la vista los rastreles y la lámina bajo cubierta.",
     "sections": [
       [
         "Qué información ayuda a localizar el origen",
@@ -131,13 +131,13 @@
         "La disponibilidad y el desplazamiento se confirman al contactar. El acceso y las condiciones de la cubierta también pueden condicionar cuándo se interviene."
       ]
     ],
-    "width": 901,
-    "height": 1600,
-    "photo_caption": "Estado de un alero · fotografía propia.",
+    "width": 864,
+    "height": 1536,
+    "photo_caption": "Revisión bajo las tejas · trabajo real.",
     "photo_ids": [
-      "revision-alero",
-      "teja-fisurada",
-      "remate-cumbrera"
+      "teja-rota-musgo",
+      "encuentro-pared",
+      "mortero-cumbrera"
     ]
   },
   {
@@ -146,8 +146,8 @@
     "tagline": "Uniones, fugas y atascos, bien revisados.",
     "description": "Valoración de fugas, uniones, soportes y bajantes atascadas. Reparación o sustitución según el estado del canalón y su evacuación.",
     "intro": "Un canalón que gotea no siempre está atascado. Puede tener una unión abierta, un tramo deteriorado o soportes que han cedido. La revisión permite valorar si conviene una reparación localizada, un desatasco o sustituir algún elemento.",
-    "image": "trabajos/canalon-alero.webp",
-    "alt": "Vista de un canalón que recorre el alero de una cubierta de teja.",
+    "image": "trabajos/canalon-metalico.webp",
+    "alt": "Recorrido de un canalón metálico junto a una cubierta de teja en un edificio.",
     "sections": [
       [
         "Dónde sale el agua importa",
@@ -178,13 +178,13 @@
         "Sí, cuando la revisión indique que es una opción adecuada. Se detallan los elementos y tramos incluidos."
       ]
     ],
-    "width": 901,
-    "height": 1600,
-    "photo_caption": "Canalón junto al alero · fotografía propia.",
+    "width": 864,
+    "height": 1536,
+    "photo_caption": "Canalón metálico junto al tejado · trabajo real.",
     "photo_ids": [
+      "canalon-metalico",
       "canalon-alero",
-      "residuos-encuentro",
-      "cumbrera-comunidad"
+      "residuos-encuentro"
     ]
   }
 ]

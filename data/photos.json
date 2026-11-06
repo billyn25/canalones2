@@ -132,5 +132,130 @@
     "thumbnail": "trabajos/tejas-suciedad-small.webp",
     "width": 901,
     "height": 1600
+  },
+  {
+    "id": "tejas-retiradas",
+    "title": "Tejas retiradas durante el trabajo",
+    "caption": "Piezas cerámicas retiradas junto a la zona de intervención en el tejado.",
+    "alt": "Piezas cerámicas retiradas junto a la zona de intervención en el tejado.",
+    "tags": [
+      "tejados",
+      "goteras"
+    ],
+    "file": "trabajos/tejas-retiradas.webp",
+    "thumbnail": "trabajos/tejas-retiradas-small.webp",
+    "width": 865,
+    "height": 1536
+  },
+  {
+    "id": "mortero-cumbrera",
+    "title": "Detalle del mortero de cumbrera",
+    "caption": "Fisuras visibles en el mortero bajo las piezas de una cumbrera cerámica.",
+    "alt": "Fisuras visibles en el mortero bajo las piezas de una cumbrera cerámica.",
+    "tags": [
+      "goteras",
+      "tejados"
+    ],
+    "file": "trabajos/mortero-cumbrera.webp",
+    "thumbnail": "trabajos/mortero-cumbrera-small.webp",
+    "width": 1536,
+    "height": 1152
+  },
+  {
+    "id": "cumbrera-soporte",
+    "title": "Cumbrera y soporte sobre cubierta",
+    "caption": "Tejas y remates de cumbrera junto a un soporte de antena.",
+    "alt": "Tejas y remates de cumbrera junto a un soporte de antena.",
+    "tags": [
+      "tejados",
+      "goteras"
+    ],
+    "file": "trabajos/cumbrera-soporte.webp",
+    "thumbnail": "trabajos/cumbrera-soporte-small.webp",
+    "width": 864,
+    "height": 1536
+  },
+  {
+    "id": "canalon-metalico",
+    "title": "Canalón metálico junto al tejado",
+    "caption": "Recorrido de un canalón metálico junto a una cubierta de teja en un edificio.",
+    "alt": "Recorrido de un canalón metálico junto a una cubierta de teja en un edificio.",
+    "tags": [
+      "canalones"
+    ],
+    "file": "trabajos/canalon-metalico.webp",
+    "thumbnail": "trabajos/canalon-metalico-small.webp",
+    "width": 864,
+    "height": 1536
+  },
+  {
+    "id": "fragmentos-teja",
+    "title": "Fragmentos de teja en la cubierta",
+    "caption": "Piezas cerámicas rotas sobre un faldón de teja.",
+    "alt": "Piezas cerámicas rotas sobre un faldón de teja.",
+    "tags": [
+      "tejados",
+      "goteras"
+    ],
+    "file": "trabajos/fragmentos-teja.webp",
+    "thumbnail": "trabajos/fragmentos-teja-small.webp",
+    "width": 864,
+    "height": 1536
+  },
+  {
+    "id": "encuentro-pared",
+    "title": "Encuentro de cubierta con pared",
+    "caption": "Estado de las tejas y del mortero en un encuentro próximo a una pared.",
+    "alt": "Estado de las tejas y del mortero en un encuentro próximo a una pared.",
+    "tags": [
+      "goteras",
+      "tejados"
+    ],
+    "file": "trabajos/encuentro-pared.webp",
+    "thumbnail": "trabajos/encuentro-pared-small.webp",
+    "width": 1536,
+    "height": 864
+  },
+  {
+    "id": "rastreles-lamina",
+    "title": "Revisión bajo las tejas",
+    "caption": "Tejas levantadas que dejan a la vista los rastreles y la lámina bajo cubierta.",
+    "alt": "Tejas levantadas que dejan a la vista los rastreles y la lámina bajo cubierta.",
+    "tags": [
+      "goteras",
+      "tejados"
+    ],
+    "file": "trabajos/rastreles-lamina.webp",
+    "thumbnail": "trabajos/rastreles-lamina-small.webp",
+    "width": 864,
+    "height": 1536
+  },
+  {
+    "id": "teja-rota-musgo",
+    "title": "Teja rota y musgo en las juntas",
+    "caption": "Pieza rota y acumulación de musgo en las juntas de una cubierta cerámica.",
+    "alt": "Pieza rota y acumulación de musgo en las juntas de una cubierta cerámica.",
+    "tags": [
+      "tejados",
+      "goteras"
+    ],
+    "file": "trabajos/teja-rota-musgo.webp",
+    "thumbnail": "trabajos/teja-rota-musgo-small.webp",
+    "width": 864,
+    "height": 1536
+  },
+  {
+    "id": "borde-cubierta",
+    "title": "Intervención en el borde de cubierta",
+    "caption": "Tramo con tejas levantadas en el borde del tejado durante un trabajo.",
+    "alt": "Tramo con tejas levantadas en el borde del tejado durante un trabajo.",
+    "tags": [
+      "goteras",
+      "tejados"
+    ],
+    "file": "trabajos/borde-cubierta.webp",
+    "thumbnail": "trabajos/borde-cubierta-small.webp",
+    "width": 864,
+    "height": 1536
   }
 ]

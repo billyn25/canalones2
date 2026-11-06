@@ -43,3 +43,7 @@ Son fotografías de ambientación; no se atribuyen al titular como trabajos real
 ## Fotografías de trabajos aportadas el 5 de noviembre de 2026
 
 El usuario facilita diez fotografías y las identifica como trabajos reales del negocio. Archivos publicados: `assets/trabajos/*.webp`. El catálogo y las descripciones figuran en `data/photos.json`. Se generan miniaturas y copias optimizadas en WebP; no se modifica el contenido de las escenas. No se deduce el municipio, la fecha del trabajo ni que una escena documente una reparación terminada. Las fotografías anteriores de Pexels y Unsplash se conservan como recursos heredados, pero ya no se utilizan en las páginas.
+
+## Ampliación de fotografías propias · 6 de noviembre de 2026
+
+Se incorporan nueve fotografías adicionales facilitadas y confirmadas por el usuario como trabajos reales. La galería reúne 19 fotografías; se describen los elementos visibles sin atribuir municipios ni resultados de reparación no documentados. Copias WebP y miniaturas sin alterar las escenas.
