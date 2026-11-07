@@ -45,7 +45,7 @@ if(search){
    const status=document.createElement('p');status.textContent=matches.length===0?'No encontramos ese nombre. Consulta el listado de tu provincia o escríbenos la localidad.':`${matches.length} ${matches.length===1?'municipio encontrado':'municipios encontrados'}${matches.length>12?'. Mostramos los 12 primeros; escribe más letras para afinar.':'.'}`;results.append(status);
    for(const row of matches.slice(0,12)){
     const link=document.createElement('a');link.href=row.url;
-    const title=document.createElement('strong');title.textContent=row.name;
+    const title=document.createElement('strong');title.textContent=`Limpieza de canalones y tejados en ${row.name}`;
     const detail=document.createElement('span');detail.textContent=`${row.province} · zona de ${row.zone}`;
     link.append(title,detail);results.append(link);
    }
@@ -60,7 +60,7 @@ if(provinceSearch)provinceSearch.addEventListener('input',()=>{
  document.querySelectorAll('.coverage-group').forEach(group=>{
   let inGroup=0;
   group.querySelectorAll('.municipality-links a').forEach(link=>{
-   const match=!q||normalize(link.textContent).includes(q);
+   const match=!q||normalize(link.querySelector('.municipality-name').textContent).includes(q);
    link.hidden=!match;if(match){inGroup++;count++}
   });
   group.hidden=inGroup===0;if(q&&inGroup)group.open=true;
