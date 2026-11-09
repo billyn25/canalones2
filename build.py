@@ -20,6 +20,7 @@ HUBS=json.loads((ROOT/'data/hubs.json').read_text())
 SERVICES=json.loads((ROOT/'data/services.json').read_text())
 PHOTOS=json.loads((ROOT/'data/photos.json').read_text())
 PHOTO_BY_ID={photo['id']:photo for photo in PHOTOS}
+WORK_TOWN_CODES=('24021','20029','48013','39097','09410','09018')
 def slug(s):
  s=''.join(c for c in unicodedata.normalize('NFD',s.lower()) if unicodedata.category(c)!='Mn')
  return re.sub('[^a-z0-9]+','-',s).strip('-')
@@ -68,7 +69,12 @@ def work_gallery(ids=None,compact=False,show_locations=False):
  heading='<h2>El trabajo, visto de cerca.</h2>' if compact else ''
  intro='<p class="work-intro">Fotografías de nuestros trabajos reales en tejados, canalones y aleros.</p>'
  if show_locations:
-  intro+='<p class="work-intro">Hemos trabajado en Boñar, Deba, Barakaldo, Vega de Pas, Valle de Mena y Aranda de Duero, entre otros municipios del norte y de la provincia de Burgos.</p>'
+  links=[]
+  for code in WORK_TOWN_CODES:
+   row=ALL[code]
+   hub=next(h for h in HUBS.values() if row in h['members'])
+   links.append(link(town_target(row,hub),municipality_label(row)))
+  intro+='<div class="work-intro" id="zonas-trabajos"><h2>Municipios donde hemos trabajado</h2><p>Consulta los servicios disponibles en estas zonas.</p><ul class="home-towns">'+''.join(f'<li>{item}</li>' for item in links)+'</ul></div>'
  more=f'<a class="btn gallery-more" href="/trabajos/">Ver las {len(PHOTOS)} fotografías →</a>' if compact else ''
  return '<section class="work-gallery'+(' compact' if compact else '')+'"><span class="eyebrow">NUESTROS TRABAJOS</span>'+heading+intro+'<div class="work-grid">'+''.join(cards)+'</div>'+more+'</section>'
 
@@ -138,12 +144,18 @@ for code,h in HUBS.items():
  close_names=', '.join(municipality_label(r) for r in close_rows)
  zone_intro=(f'<p class="zone-intro">También atendemos consultas de {esc(close_names)} y los demás municipios de esta zona. <a href="#cercanos">Busca el tuyo y elige el servicio →</a></p>' if close_rows else '')
  body=f'<section class="inner">{crumbs(b)}<span class="eyebrow">{esc(h["name"].upper())} Y MUNICIPIOS CERCANOS</span><h1>Limpieza de tejados<br>y canalones en {esc(n)} <span class="heading-area">y municipios cercanos.</span></h1><p class="lead">{esc(h["intro"])}</p>{zone_intro}<a class="btn" href="#presupuesto">Consultar presupuesto en {esc(n)} ↗</a><a class="textlink" href="#cercanos">Ver municipios de esta zona ↓</a></section><section class="local-content"><article><span class="eyebrow">EL TEJADO</span><h2>Limpieza de tejados en {esc(n)}</h2><p>Retirada de suciedad y residuos según el material y el estado de la cubierta. Si también hay canalones que limpiar o piezas deterioradas, se concreta su valoración en el presupuesto.</p><a href="/servicios/limpieza-tejados/" class="textlink">Qué incluye y cómo se valora →</a></article><article><span class="eyebrow">EL DESAGÜE</span><h2>Limpieza de canalones en {esc(n)}</h2><p>Retirada de hojas, barro y acumulaciones; revisión de las salidas hacia las bajantes. Si el agua se pierde por una unión o el tramo está vencido, se diferencia la reparación de la limpieza.</p><a href="/servicios/limpieza-canalones/" class="textlink">Consultar el servicio de canalones →</a></article><article class="roof-repairs"><span class="eyebrow">FILTRACIONES Y PIEZAS DAÑADAS</span><h2>Goteras y reparación de tejados en {esc(n)}</h2><p>Si entra agua o ves tejas rotas, piezas desplazadas o remates deteriorados, puedes consultar su revisión y reparación. Se comprueba el origen de la filtración y el estado de la cubierta para concretar el trabajo, los materiales y el acceso necesarios.</p><a href="/servicios/goteras/" class="textlink">Consultar reparación de goteras y tejados →</a></article></section><section class="local-focus"><div><span class="eyebrow">PARA PREPARAR TU CONSULTA</span><h2>{esc(h["focus"])}.</h2><p>{esc(h["detail"])}</p></div><aside><span class="eyebrow">ESTE DATO NOS AYUDA</span><p>{esc(h["ask"])}</p><p class="small">Haz las fotos desde el suelo o desde un punto seguro. No subas a la cubierta.</p></aside></section><section class="town-coverage" id="cercanos"><span class="eyebrow">COBERTURA DE ESTA ZONA</span><h2>Servicios en {esc(n)} y municipios cercanos.</h2><p>Puedes pedir solo limpieza de tejados, solo limpieza de canalones o consultar goteras y reparación de tejas. Elige el servicio bajo el nombre de tu municipio para preparar el presupuesto con ambos datos. Confirmamos disponibilidad y desplazamiento antes de la visita.</p><ul class="nearby-list municipality-service-list">{nearby}</ul><p>{link("/"+h["province_slug"]+"/","Ver todos los municipios de "+h["province"]+" →","textlink")}</p></section>'+faq([(h['question'],h['answer']),('¿Y si además hay una gotera?','Explica cuándo aparece y dónde está la mancha. Una limpieza puede resolver un rebose por obstrucción, pero una teja o un remate deteriorado necesita otra actuación. Se revisa antes de proponer la reparación.')])+contact(n)+f'<section class="related"><span class="eyebrow">OTRAS ZONAS PRINCIPALES</span><div>'+''.join(link(path(other),short(other)+' ↗') for other in neighbors)+'</div></section>'
- body=body.replace(contact(n),work_gallery(['revision-canalon-red','humedad-techo','teja-rota-musgo'] if code.startswith('24') else ['teja-vegetacion','canalon-metalico','encuentro-pared'],compact=True)+contact(n))
+ gallery=work_gallery(['revision-canalon-red','humedad-techo','teja-rota-musgo'] if code.startswith('24') else ['teja-vegetacion','canalon-metalico','encuentro-pared'],compact=True)
+ if any(row[1] in WORK_TOWN_CODES for row in h['members']):
+  gallery+='<section class="related"><h2>Trabajos en esta zona</h2><p>Consulta las fotos del equipo y los municipios donde hemos trabajado.</p><div><a href="/trabajos/#zonas-trabajos">Ver trabajos y localidades →</a></div></section>'
+ body=body.replace(contact(n),gallery+contact(n))
  page(p,f'Limpieza de tejados y canalones en {n} y alrededores',f'Limpieza de tejados, canalones y reparación de goteras en {n} y municipios cercanos. Busca tu localidad y pide presupuesto de limpieza o reparación.',body,b,'Limpieza de tejados y canalones en '+n,n,coverage=[{'@type':'City','name':r[0]} for r in h['members']])
 for s in SERVICES:
  p='/servicios/'+s['slug']+'/'
  b=[('Inicio','/'),(s['title'],p)]
  body=f'<section class="service-hero"><div>{crumbs(b)}<span class="eyebrow">QUÉ HACEMOS</span><h1>{s["title"]}.</h1><h2>{s["tagline"]}</h2><p>{s["intro"]}</p><a class="btn" href="#presupuesto">Consultar este servicio ↗</a></div><figure><img src="/assets/{s["image"]}" width="{s["width"]}" height="{s["height"]}" alt="{s["alt"]}" fetchpriority="high"><figcaption>{esc(s["photo_caption"])}</figcaption></figure></section><section class="service-detail">'+''.join(f'<article><h2>{title}</h2><p>{txt}</p></article>' for title,txt in s['sections'])+'<aside class="checklist"><h2>Para tu consulta</h2><ul>'+''.join(f'<li>{c}</li>' for c in s['checks'])+'</ul><a href="/guias/presupuesto/" class="textlink">Cómo se prepara el presupuesto →</a></aside></section><section class="related"><h2>Consulta tu zona.</h2><div>'+''.join(link('/'+ps+'/',display+' ↗') for display,ps,pc in PROVINCES.values())+'</div></section>'+faq(s['faq'])+contact(service=s['title'])
+ if s['slug']=='limpieza-canalones':
+  related='<section class="related"><h2>Cuando hace falta algo más que limpiar</h2><p>Una junta abierta o un tramo descolgado requieren valorar el canalón. Si la humedad aparece dentro de la vivienda, conviene revisar también la cubierta.</p><div><a href="/servicios/reparacion-canalones/">Reparación de canalones y revisión de bajantes →</a><a href="/servicios/goteras/">Revisión de goteras y reparación de tejados →</a></div></section>'
+  body=body.replace('<section class="related"><h2>Consulta tu zona.',related+'<section class="related"><h2>Consulta tu zona.',1)
  body=body.replace(contact(service=s['title']),work_gallery(s['photo_ids'],compact=True)+contact(service=s['title']))
  page(p,s['title']+' | Fuentes',s['description'],body,b,s['title'])
 # A single work gallery; locations of individual photographs are not inferred.
