@@ -96,13 +96,13 @@ def municipality_label(row):
  aliases=CONFIG.get('municipality_aliases',{}).get(row[1],[])
  return row[0]+(' ('+', '.join(aliases)+')' if aliases else '')
 def town_service_link(target,label):
- return f'<a href="{target}">Limpieza de canalones y tejados en <span class="municipality-name">{esc(label)}</span></a>'
+ return f'<a href="{target}"><span class="municipality-name">{esc(label)}</span></a>'
 def town_target(row,h):return path(h) if row[1]==h['code'] else path(h)+'#municipio-'+row[1]
 def municipality_service_card(row):
  name,code=row[:2];label=municipality_label(row)
  choices=[('Limpieza de tejados','Limpieza de tejados'),('Limpieza de canalones','Limpieza de canalones'),('Goteras y arreglo de tejado','Reparación de goteras y tejados')]
  actions=''.join(f'<a href="#presupuesto" data-locality="{esc(name,quote=True)}" data-service="{esc(value,quote=True)}" aria-label="{esc(text+" en "+label,quote=True)}">{esc(text)} →</a>' for text,value in choices)
- return f'<li id="municipio-{code}" class="municipality-service"><h3>Limpieza de canalones y tejados en {esc(label)}</h3><div class="municipality-services">{actions}</div></li>'
+ return f'<li id="municipio-{code}" class="municipality-service"><h3>{esc(label)}</h3><div class="municipality-services">{actions}</div></li>'
 def province_zone(source):
  display,ps,pc=PROVINCES[source]; hs=[h for c,h in HUBS.items() if c.startswith(pc)]
  return '<div class="coverage-groups">'+''.join(f'<details class="coverage-group" open><summary>{esc(short(h))} y zona <span>{len(h["members"])} municipios</span></summary><div class="municipality-links">'+''.join(town_service_link(town_target(r,h),municipality_label(r)) for r in h['members'])+f'</div>{link(path(h),"Ver servicios y preparar la consulta en esta zona →","all-zone")}</details>' for h in hs)+'</div>'

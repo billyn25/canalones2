@@ -2,23 +2,27 @@
   {
     "slug": "limpieza-canalones",
     "title": "Limpieza de canalones",
-    "tagline": "Que el agua encuentre su camino.",
+    "tagline": "Si el agua rebosa, lo primero es saber por qué.",
     "description": "Retirada de hojas, barro y residuos de canalones, revisión de salidas y valoración de bajantes. Consulta por tu vivienda, comunidad o nave.",
-    "intro": "Si el agua rebosa cuando llueve, el canalón puede estar lleno de hojas, barro o pequeñas ramas. La limpieza retira esos residuos y permite revisar el paso hacia la bajante. Si hay fugas, deformaciones o soportes sueltos, se valoran como reparación.",
+    "intro": "Limpiamos canalones de viviendas, comunidades y naves. Dinos si el agua desborda por el borde, gotea por una junta o queda parada después de llover. Ese detalle ayuda a preparar la visita y a separar la limpieza de un posible desatasco o una reparación.",
     "image": "trabajos/canalon-alero.webp",
     "alt": "Vista de un canalón que recorre el alero de una cubierta de teja.",
     "sections": [
       [
-        "Qué se revisa para presupuestar",
-        "Longitud aproximada de los tramos, altura del alero, accesos y cantidad de residuos. También interesa saber si el agua sale por arriba, pierde por una unión o queda retenida después de llover. Esas situaciones no tienen siempre la misma causa."
+        "Si rebosa por el borde",
+        "Primero se revisa si las hojas, el barro o la arenilla de las tejas tapan el canalón o la boca de la bajante. Si el canalón está despejado y sigue rebosando, conviene revisar el tubo antes de dar por resuelto el atasco."
       ],
       [
-        "Retirada de residuos y recorrido del agua",
-        "El alcance debe indicar qué tramos se limpian y cómo se revisan sus salidas. Si el canalón conecta con una bajante obstruida, hay que valorar ese atasco para que la limpieza no deje pendiente el punto que impide evacuar el agua."
+        "Si gotea por una junta",
+        "Una pérdida en un punto concreto puede deberse a una unión abierta, una fisura o un tramo que se ha movido. Indica por dónde sale el agua. Así se puede presupuestar la reparación junto con la limpieza si hacen falta ambas."
       ],
       [
-        "Lo que una limpieza no corrige por sí sola",
-        "Un canalón perforado, un soporte vencido o una unión abierta necesitan una reparación específica. Si se observan daños, se diferencia su valoración de la limpieza y se acuerda el trabajo antes de realizarlo."
+        "Si queda agua después de llover",
+        "Cuando el agua sigue acumulada aunque la salida esté despejada, hay que revisar si algún tramo ha perdido pendiente o si un soporte ha cedido. Eso permite decidir si basta con retirar residuos o también hay que corregir el tramo."
+      ],
+      [
+        "Qué incluye la consulta de presupuesto",
+        "Describe los tramos que quieres limpiar y señala si dan a la calle, a un patio o a una terraza. La altura y el acceso ayudan a valorar el trabajo. Si también hay que revisar bajantes o reparar uniones, se concreta ese alcance antes de empezar."
       ]
     ],
     "checks": [
@@ -35,6 +39,10 @@
       [
         "¿Hay que limpiar cada año?",
         "La frecuencia depende de la vegetación próxima, el diseño del desagüe y los antecedentes de atascos. Se valora para cada inmueble; no hay un intervalo válido para todos."
+      ],
+      [
+        "¿Puedo pedir la limpieza de un solo tramo?",
+        "Sí. Indica qué fachada o patio corresponde al tramo y si el agua rebosa o gotea en algún punto. Si conoces los metros aproximados, inclúyelos en la consulta."
       ]
     ],
     "width": 901,
