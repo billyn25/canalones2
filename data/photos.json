@@ -326,5 +326,47 @@
     "thumbnail": "trabajos/ugao-detalle-cubierta-small.webp",
     "width": 901,
     "height": 1600
+  },
+  {
+    "id": "ugao-cumbrera",
+    "title": "Detalle de la cumbrera",
+    "caption": "Vista de la cumbrera y las tejas de ambos lados de la cubierta de Ugao-Miraballes.",
+    "alt": "Vista de la cumbrera y las tejas de ambos lados de la cubierta de Ugao-Miraballes.",
+    "tags": [
+      "tejados",
+      "canalones"
+    ],
+    "file": "trabajos/ugao-cumbrera.webp",
+    "thumbnail": "trabajos/ugao-cumbrera-small.webp",
+    "width": 901,
+    "height": 1600
+  },
+  {
+    "id": "ugao-chimenea",
+    "title": "Entorno de la chimenea",
+    "caption": "Tejas y remates alrededor de una chimenea de la cubierta de Ugao-Miraballes.",
+    "alt": "Tejas y remates alrededor de una chimenea de la cubierta de Ugao-Miraballes.",
+    "tags": [
+      "tejados",
+      "canalones"
+    ],
+    "file": "trabajos/ugao-chimenea.webp",
+    "thumbnail": "trabajos/ugao-chimenea-small.webp",
+    "width": 901,
+    "height": 1600
+  },
+  {
+    "id": "ugao-vista-faldon",
+    "title": "Vista general del faldón",
+    "caption": "Vista del faldón de teja y del muro junto a la cubierta intervenida en Ugao-Miraballes.",
+    "alt": "Vista del faldón de teja y del muro junto a la cubierta intervenida en Ugao-Miraballes.",
+    "tags": [
+      "tejados",
+      "canalones"
+    ],
+    "file": "trabajos/ugao-vista-faldon.webp",
+    "thumbnail": "trabajos/ugao-vista-faldon-small.webp",
+    "width": 901,
+    "height": 1600
   }
 ]

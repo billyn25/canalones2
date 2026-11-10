@@ -23,7 +23,7 @@ PHOTO_BY_ID={photo['id']:photo for photo in PHOTOS}
 WORK_TOWN_CODES=('24021','20029','48013','39097','09410','09018','48065')
 UGAO_WORK_PATH='/trabajos/limpieza-tejado-canalones-ugao-miraballes/'
 UGAO_WORK_TITLE='Limpieza de tejado y canalones en Ugao-Miraballes'
-UGAO_WORK_PHOTOS=('ugao-restos-hojas','ugao-cubierta-teja','ugao-detalle-cubierta')
+UGAO_WORK_PHOTOS=('ugao-restos-hojas','ugao-cubierta-teja','ugao-detalle-cubierta','ugao-cumbrera','ugao-chimenea','ugao-vista-faldon')
 def slug(s):
  s=''.join(c for c in unicodedata.normalize('NFD',s.lower()) if unicodedata.category(c)!='Mn')
  return re.sub('[^a-z0-9]+','-',s).strip('-')
