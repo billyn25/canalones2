@@ -20,7 +20,7 @@ HUBS=json.loads((ROOT/'data/hubs.json').read_text())
 SERVICES=json.loads((ROOT/'data/services.json').read_text())
 PHOTOS=json.loads((ROOT/'data/photos.json').read_text())
 PHOTO_BY_ID={photo['id']:photo for photo in PHOTOS}
-WORK_TOWN_CODES=('24021','20029','48013','39097','09410','09018','48065')
+WORK_TOWN_CODES=('24021','20029','48013','39097','09410','09018','48065','48057')
 UGAO_WORK_PATH='/trabajos/limpieza-tejado-canalones-ugao-miraballes/'
 UGAO_WORK_TITLE='Limpieza de tejado y canalones en Ugao-Miraballes'
 UGAO_WORK_PHOTOS=('ugao-restos-hojas','ugao-cubierta-teja','ugao-detalle-cubierta','ugao-cumbrera','ugao-chimenea','ugao-vista-faldon')
@@ -81,8 +81,19 @@ def work_gallery(ids=None,compact=False,show_locations=False):
  more=f'<a class="btn gallery-more" href="/trabajos/">Ver las {len(PHOTOS)} fotografías →</a>' if compact else ''
  return '<section class="work-gallery'+(' compact' if compact else '')+'"><span class="eyebrow">NUESTROS TRABAJOS</span>'+heading+intro+'<div class="work-grid">'+''.join(cards)+'</div>'+more+'</section>'
 
-def ugao_work_feature():
- return f'<section class="related"><span class="eyebrow">TRABAJO REAL · UGAO-MIRABALLES</span><h2>Retirada de hojas del tejado y los canalones</h2><p>La limpieza integral incluyó la retirada y recogida de hojas y restos vegetales. En las fotos se ve la cubierta y el material retirado.</p><div>{link(UGAO_WORK_PATH,"Ver la limpieza en Ugao-Miraballes →")}</div></section>'
+LEKEITIO_WORK_PATH='/trabajos/tejado-canalon-lekeitio/'
+LEKEITIO_WORK_TITLE="Tejado, alero y canalón en Lekeitio"
+LEKEITIO_WORK_PHOTOS=("lekeitio-alero","lekeitio-alero-chimenea","lekeitio-revestimiento","lekeitio-canalon-lateral","lekeitio-borde-tejado","lekeitio-tramo-canalon")
+
+def work_features(codes=None):
+ cases=[
+  ('48057','Lekeitio',LEKEITIO_WORK_TITLE,"Fotos de un trabajo en Lekeitio. Se aprecia el estado del alero, los bordes de teja y el recorrido del canalón.",LEKEITIO_WORK_PATH),
+  ('48065','Ugao-Miraballes','Retirada de hojas del tejado y los canalones','La limpieza integral incluyó la retirada y recogida de hojas y restos vegetales. En las fotos se ve la cubierta y el material retirado.',UGAO_WORK_PATH),
+ ]
+ return ''.join(
+  f'<section class="related"><span class="eyebrow">TRABAJO REAL · {esc(town.upper())}</span><h2>{esc(title)}</h2><p>{esc(description)}</p><div>{link(url,"Ver fotos del trabajo en "+town+" →")}</div></section>'
+  for code,town,title,description,url in cases if codes is None or code in codes
+ )
 
 def footer():
  return f'''<footer class="site-footer"><div class="footer-top"><div><span class="eyebrow">PARA CUANDO TOCA MIRAR ARRIBA</span><h2>Tejado cuidado.<br>Agua por su sitio.</h2><p>Cuéntanos qué necesitas y dónde está el inmueble.<br>Empezamos por ahí.</p></div><a class="footer-phone" href="tel:{PHONE}">{DISPLAY}<span>Llámanos para consultar disponibilidad ↗</span></a></div><div class="footer-roofs" aria-hidden="true"><svg viewBox="0 0 1200 100" preserveAspectRatio="none"><path d="M0 80H55V58L125 13 195 58V80H255V50L320 8 385 50V80H490V60L555 20 620 60V80H710V48L790 4 870 48V80H935V65L1015 19 1095 65V80H1200"/><path d="M112 75V52H138V75M306 75V45H333V75M542 75V54H568V75M775 75V40H805V75M1001 75V57H1029V75"/></svg></div><div class="footer-grid"><div><a class="brand" href="/">fuentes<span>TEJADOS & CANALONES</span></a><p>Limpieza, mantenimiento<br>y reparación de cubiertas.</p><p>Base del equipo en Bilbao</p><address>Posta Kalea, 21<br>48005 Bilbao, Bizkaia</address><p>Nos desplazamos a las zonas de servicio.</p><a class="footer-wa" href="https://wa.me/34641490536" target="_blank" rel="noopener">Escribir por WhatsApp ↗</a></div><div><h3>En qué te ayudamos</h3>{''.join(link('/servicios/'+s['slug']+'/',s['title']) for s in SERVICES)}<a href="/trabajos/">Fotos de nuestros trabajos</a><a href="/guias/limpieza-o-reparacion/">¿Limpieza o reparación?</a><a href="/guias/presupuesto/">Cómo preparar el presupuesto</a></div><div><h3>Dónde vamos</h3>{''.join(link('/'+ps+'/',display) for display,ps,pc in PROVINCES.values())}</div><div><h3>Antes de empezar</h3><p>Casas, comunidades y naves.</p><p>Presupuesto según el estado,<br>las medidas y el acceso.</p><a href="#presupuesto">Preparar una consulta →</a><a href="/aviso-legal/">Aviso legal</a><a href="/privacidad/">Privacidad y cookies</a></div></div><div class="footer-bottom"><span>© {__import__('datetime').date.today().year} Fuentes · Tejados y Canalones</span><span>Sin rodeos. Con las cosas claras.</span></div></footer><div class="mobile-contact"><a href="tel:{PHONE}">Llamar</a><a href="https://wa.me/34641490536" target="_blank" rel="noopener">WhatsApp ↗</a></div>'''
@@ -134,7 +145,7 @@ for src,(display,ps,pc) in PROVINCES.items():
  zonecards+=f'<article class="province-card"><span>{len(MUNICIPALITIES[src])} municipios</span><h3>{link("/"+ps+"/",display+" ↗")}</h3><ul class="home-towns">'+''.join(townlinks)+f'</ul>{link("/"+ps+"/","Ver todos los municipios →","all-zone")}</article>'
 
 body='''<section class="hero"><div class="hero-copy"><span class="eyebrow">LIMPIEZA DE TEJADOS Y CANALONES</span><h1>Que llueva fuera.<br><em>Dentro, tranquilidad.</em></h1><p>Limpiamos tejados y canalones, revisamos bajantes y reparamos goteras. Cuéntanos qué necesitas y preparamos tu presupuesto.</p><a class="btn" href="#presupuesto">Pedir presupuesto ↗</a><a class="textlink" href="#servicios">Ver los servicios ↓</a><div class="hero-note">Casas, comunidades y naves.<br>Una consulta sencilla, sin rodeos.</div></div><figure><img src="/assets/trabajos/cubierta-comunidad.webp" width="900" height="1600" alt="Vista de un tejado de comunidad durante una revisión propia" fetchpriority="high"><figcaption>Fotografía de nuestros trabajos · cubierta de comunidad.</figcaption><span class="stamp">Menos líos.<br>Más cuidado.</span></figure></section><div class="strip">UNA HOJA HOY. UN ATASCO MAÑANA. <span>Mejor echarle un vistazo a tiempo. ↗</span></div><section id="servicios"><div class="section-head"><span class="eyebrow">QUÉ HACEMOS</span><h2>Arriba pasan cosas.<br>Nos ocupamos de ellas.</h2><p>Puedes pedir solo limpieza de tejados, solo limpieza de canalones o ambos servicios. Si hay una filtración, primero hay que revisar su origen.</p></div><div class="services">'''+''.join(card(s,i) for i,s in enumerate(SERVICES))+'''</div></section><section class="split-story"><figure><img src="/assets/trabajos/canalon-alero.webp" width="900" height="1600" alt="Canalón junto al alero fotografiado durante nuestros trabajos" loading="lazy"></figure><div><span class="eyebrow">CADA COSA, POR SU NOMBRE</span><h2>¿Suciedad, atasco<br>o una gotera?</h2><p>Si el canalón rebosa, puede necesitar limpieza. Si pierde por una unión, conviene revisar el tramo. Si aparece una mancha dentro de casa, hay que localizar por dónde entra el agua.</p><p>Nos cuentas lo que ves y valoramos qué revisión hace falta. El presupuesto debe explicar el trabajo que se va a realizar.</p><a class="textlink" href="/guias/limpieza-o-reparacion/">Qué observar antes de contactar →</a></div></section><section class="how"><span class="eyebrow">ASÍ DE SENCILLO</span><h2>Una foto vale<br>más que mil explicaciones.</h2><div class="steps"><article><b>01</b><h3>Nos lo cuentas</h3><p>Municipio, tipo de inmueble y qué ocurre. Envía fotos tomadas desde un lugar seguro.</p></article><article><b>02</b><h3>Revisamos el alcance</h3><p>Confirmamos acceso, medidas y estado. Si hace falta una visita para presupuestar, la acordamos.</p></article><article><b>03</b><h3>Decides con presupuesto</h3><p>Concretamos qué incluye el trabajo y su importe antes de realizarlo.</p></article></div></section><section id="zonas"><div class="section-head"><span class="eyebrow">CERCA DE TU CASA</span><h2>Siete provincias.<br>Busca tu municipio.</h2><p>Municipios principales con página propia y localidades cercanas agrupadas por zona. Puedes consultar cualquiera de los municipios; confirmamos desplazamiento y disponibilidad al contactar.</p></div><label class="search">¿Dónde necesitas el servicio?<input id="town-search" type="search" placeholder="Por ejemplo: Lekeitio, Segovia, Irun…" autocomplete="off" aria-controls="town-results"></label><div id="town-results" class="town-results" aria-live="polite"></div><noscript><p>Consulta el listado completo en cada provincia:</p></noscript><div class="province-cards">'''+zonecards+'''</div></section>'''+faq([('¿Puedo pedir solo limpieza de tejados o solo de canalones?','Sí. Son servicios distintos y puedes solicitar uno, el otro o ambos. El presupuesto debe indicar qué incluye la intervención.'),('¿Cuánto cuesta?','Depende de los metros, el material, la altura, el acceso y el estado. Una fotografía orienta, pero para fijar el importe puede hacer falta una visita.'),('¿Tengo que subir al tejado para hacer fotos?','No. Envía las que puedas tomar desde un lugar seguro. Explica lo que observas y se valorará cómo revisar la cubierta.'),('¿Atendéis goteras urgentes?','Llama para consultar disponibilidad y explica si está entrando agua ahora. El desplazamiento y las condiciones de intervención se confirman al contactar.')])+contact()
-body=body.replace('<section class="how">',ugao_work_feature()+work_gallery(['ugao-restos-hojas','canalon-metalico','rastreles-lamina'],compact=True,show_locations=True)+'<section class="how">')
+body=body.replace('<section class="how">',work_features()+work_gallery(['lekeitio-alero','ugao-restos-hojas','rastreles-lamina'],compact=True,show_locations=True)+'<section class="how">')
 page('/','Limpieza de tejados y canalones | Fuentes','Limpieza de tejados y de canalones, goteras y bajantes. Vizcaya, Álava, Guipúzcoa, Burgos, Segovia, Cantabria y León. Consulta presupuesto.',body)
 PROVINCE_NOTES={
  "20": ("Canalones expuestos y uniones deterioradas", "Si el inmueble está cerca del mar, dinos de qué material es el canalón y dónde se ven manchas, corrosión o pérdidas. Una foto de la unión y otra del tramo completo ayudan a valorar si la intervención puede ser localizada.", "reparacion-canalones", "Consultar la reparación de canalones"),
@@ -157,7 +168,7 @@ for source,(display,ps,pc) in PROVINCES.items():
   town_names=' y '.join([', '.join(work_towns[:-1]),work_towns[-1]]) if len(work_towns)>1 else work_towns[0]
   local_details+=f'<section class="related"><h2>Trabajos realizados en la zona</h2><p>Hemos trabajado en {esc(town_names)}.</p><div><a href="/trabajos/#zonas-trabajos">Ver trabajos y localidades →</a></div></section>'
  if pc=='48':
-  local_details+=ugao_work_feature()
+  local_details+=work_features(('48057','48065'))
  body=body.replace('<section id="municipios"',local_details+'<section id="municipios"',1)
  body=body.replace(contact(),work_gallery(['revision-canalon-red','humedad-techo','mortero-cumbrera'] if source=='León' else ['cubierta-ceramica','canalon-metalico','mortero-cumbrera'],compact=True)+contact())
  page(p,f'Limpieza de tejados y canalones en {display} y sus pueblos',f'Limpieza de tejados y canalones en {display} y sus pueblos. Reparación de goteras y bajantes. Busca tu municipio y pide presupuesto al {DISPLAY}.',body,b,'Limpieza de tejados y canalones en '+display,coverage=[{'@type':'AdministrativeArea','name':display}])
@@ -172,8 +183,7 @@ for code,h in HUBS.items():
  gallery=work_gallery(['revision-canalon-red','humedad-techo','teja-rota-musgo'] if code.startswith('24') else ['teja-vegetacion','canalon-metalico','encuentro-pared'],compact=True)
  if any(row[1] in WORK_TOWN_CODES for row in h['members']):
   gallery+='<section class="related"><h2>Trabajos en esta zona</h2><p>Consulta las fotos del equipo y los municipios donde hemos trabajado.</p><div><a href="/trabajos/#zonas-trabajos">Ver trabajos y localidades →</a></div></section>'
- if ALL['48065'] in h['members']:
-  gallery=ugao_work_feature()+gallery
+ gallery=work_features({row[1] for row in h['members']})+gallery
  body=body.replace(contact(n),gallery+contact(n))
  page(p,f'Limpieza de tejados y canalones en {n} y alrededores',f'Limpieza de tejados, canalones y reparación de goteras en {n} y municipios cercanos. Busca tu localidad y pide presupuesto de limpieza o reparación.',body,b,'Limpieza de tejados y canalones en '+n,n,coverage=[{'@type':'City','name':r[0]} for r in h['members']])
 for s in SERVICES:
@@ -185,13 +195,13 @@ for s in SERVICES:
   body=body.replace('<section class="related"><h2>Consulta tu zona.',related+'<section class="related"><h2>Consulta tu zona.',1)
  gallery=work_gallery(s['photo_ids'],compact=True)
  if s['slug'] in ('limpieza-canalones','limpieza-tejados'):
-  gallery=ugao_work_feature()+gallery
+  gallery=work_features()+gallery
  body=body.replace(contact(service=s['title']),gallery+contact(service=s['title']))
  page(p,s['title']+' | Fuentes',s['description'],body,b,s['title'])
 # A single work gallery; locations of individual photographs are not inferred.
 works_path='/trabajos/'
 works_crumbs=[('Inicio','/'),('Nuestros trabajos',works_path)]
-works_body='<section class="inner works-heading">'+crumbs(works_crumbs)+'<span class="eyebrow">FOTOGRAFÍAS PROPIAS</span><h1>Trabajos reales.<br>El tejado, de cerca.</h1><p>Imágenes tomadas durante nuestros trabajos en cubiertas, canalones y aleros: tejas, encuentros, desagües y detalles del estado de los materiales.</p></section>'+ugao_work_feature()+work_gallery(show_locations=True)+contact()
+works_body='<section class="inner works-heading">'+crumbs(works_crumbs)+'<span class="eyebrow">FOTOGRAFÍAS PROPIAS</span><h1>Trabajos reales.<br>El tejado, de cerca.</h1><p>Imágenes tomadas durante nuestros trabajos en cubiertas, canalones y aleros: tejas, encuentros, desagües y detalles del estado de los materiales.</p></section>'+work_features()+work_gallery(show_locations=True)+contact()
 page(works_path,'Fotos de nuestros trabajos en tejados y canalones | Fuentes','Fotografías propias de trabajos y revisiones en tejados, canalones y aleros. Descubre los detalles de cubiertas, remates y desagües.',works_body,works_crumbs)
 ugao_row=ALL['48065']
 ugao_hub=next(h for h in HUBS.values() if ugao_row in h['members'])
@@ -213,6 +223,20 @@ ugao_body=f'''<section class="inner guide">
  <div>{link('/servicios/limpieza-canalones/','Limpieza de canalones →')}{link('/servicios/limpieza-tejados/','Limpieza de tejados →')}{link(town_target(ugao_row,ugao_hub),'Servicio en Ugao-Miraballes →')}</div>
 </section>'''+contact('Ugao-Miraballes','Limpieza de tejados y canalones')
 page(UGAO_WORK_PATH,UGAO_WORK_TITLE+' | Trabajo real de Fuentes','Fotos de la limpieza integral de un tejado y sus canalones en Ugao-Miraballes, con retirada y recogida de hojas y restos vegetales.',ugao_body,ugao_crumbs)
+lekeitio_crumbs=[('Inicio','/'),('Nuestros trabajos',works_path),(LEKEITIO_WORK_TITLE,LEKEITIO_WORK_PATH)]
+lekeitio_body=f'''<section class="inner guide">
+ {crumbs(lekeitio_crumbs)}
+ <span class="eyebrow">TRABAJO REAL · LEKEITIO</span>
+ <h1>{LEKEITIO_WORK_TITLE}</h1>
+ <p>Estas seis fotos de Lekeitio muestran el alero, el borde de la cubierta y el canalón desde distintos ángulos. En algunos puntos se ve el revestimiento del alero desprendido y, en las tomas desde arriba, el recorrido del canalón junto a las tejas.</p>
+ <h2>Qué muestran las fotos</h2>
+ <p>Las vistas generales sitúan el alero respecto al tejado y la chimenea. Las fotos de cerca permiten ver el acabado deteriorado bajo las tejas y dos perspectivas del canalón. Si observas algo parecido, al consultar indica si el agua rebosa, gotea en un punto o moja la parte inferior del alero.</p>
+ <a class="btn" href="#presupuesto">Consultar un trabajo en Lekeitio ↗</a>
+</section>'''+work_gallery(LEKEITIO_WORK_PHOTOS)+f'''<section class="related">
+ <h2>Servicios en la zona</h2>
+ <div>{link(path(HUBS['48057']),'Tejados y canalones en Lekeitio →')}{link('/servicios/reparacion-canalones/','Canalones y bajantes →')}{link('/servicios/goteras/','Goteras y reparación de tejados →')}</div>
+</section>'''+contact('Lekeitio')
+page(LEKEITIO_WORK_PATH,LEKEITIO_WORK_TITLE+' | Trabajo real de Fuentes','Seis fotos de un trabajo real en Lekeitio, con vistas del alero, el borde de teja y el recorrido del canalón.',lekeitio_body,lekeitio_crumbs)
 # Two practical guides, not a generated blog.
 guides=[('limpieza-o-reparacion','¿Limpieza o reparación? Qué observar antes de llamar','Distingue un canalón que rebosa, una unión que pierde y una gotera interior. Qué observar para preparar una consulta de tejados o canalones.', [('El canalón rebosa por arriba','Si ves hojas o residuos, puede haber una obstrucción. Indica si rebosa en un punto o a lo largo de todo el tramo. Si la salida hacia la bajante está bloqueada, retirar solo los restos visibles puede no resolverlo.'),('El agua cae por una unión','Una junta abierta o un material deteriorado pueden necesitar reparación. Envía una foto del detalle y otra del tramo completo; una fuga localizada no permite concluir que haya que sustituir todo el sistema.'),('La humedad aparece dentro','Cuenta si hay goteo o una mancha, con qué lluvia aparece y si está próxima a una pared, chimenea o ventana. El agua puede desplazarse por la cubierta antes de hacerse visible, así que no se presupone el origen por la mancha.'),('El tejado tiene vegetación o suciedad','Explica qué observas y si hay también piezas dañadas. La limpieza debe adaptarse al material y a su estado. No es una impermeabilización ni sustituye la reparación de elementos rotos.'),('Qué no necesitas hacer','No hace falta subir al tejado ni desmontar piezas para pedir una primera valoración. Haz fotos desde un punto seguro y explica el problema. Si se necesita inspección, se acuerdan acceso y condiciones.')]),('presupuesto','Cómo pedir presupuesto de tejados y canalones','Qué datos y fotos ayudan a presupuestar una limpieza de tejado, canalones o reparación de goteras, sin precios inventados.', [('Empieza por el municipio y el inmueble','Indica la localidad, si es casa, comunidad o nave y qué servicio buscas. Si es una comunidad, facilita quién coordina la revisión. Si está fuera del núcleo, puedes enviar una ubicación precisa por WhatsApp.'),('Una foto general y una del problema','La vista general permite entender alturas, accesos y forma de la cubierta. Una imagen de detalle ayuda a mostrar la suciedad, la fuga o la humedad. No subas al tejado para conseguirlas.'),('Las medidas orientan; el acceso también','Si sabes los metros de canalón o la superficie de tejado, indícalos. No son el único factor: altura, espacio alrededor, material, estado y medios de trabajo influyen en el alcance y el importe.'),('Pide que el alcance quede claro','Debe especificarse qué superficies y tramos se incluyen, si se revisan las bajantes y si hay reparaciones o sustituciones. Una limpieza, un desatasco y una reparación no deben darse por equivalentes.'),('La visita puede ser necesaria','Con fotos se puede preparar la consulta, pero para cerrar un importe puede hacer falta revisar el inmueble. Antes se confirma disponibilidad, desplazamiento y acceso. No publicamos un precio universal que ignore estas diferencias.')])]
 for s,t,desc,sections in guides:

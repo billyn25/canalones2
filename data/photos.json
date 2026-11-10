@@ -368,5 +368,89 @@
     "thumbnail": "trabajos/ugao-vista-faldon-small.webp",
     "width": 901,
     "height": 1600
+  },
+  {
+    "id": "lekeitio-alero",
+    "title": "Vista del alero",
+    "caption": "Vista general del alero de teja y del revestimiento desprendido en Lekeitio.",
+    "alt": "Vista general del alero de teja y del revestimiento desprendido en Lekeitio.",
+    "tags": [
+      "tejados",
+      "canalones"
+    ],
+    "file": "trabajos/lekeitio-alero.webp",
+    "thumbnail": "trabajos/lekeitio-alero-small.webp",
+    "width": 1600,
+    "height": 901
+  },
+  {
+    "id": "lekeitio-alero-chimenea",
+    "title": "Alero y chimenea",
+    "caption": "Vista del alero bajo el borde de teja, con una chimenea al fondo.",
+    "alt": "Vista del alero bajo el borde de teja, con una chimenea al fondo.",
+    "tags": [
+      "tejados",
+      "canalones"
+    ],
+    "file": "trabajos/lekeitio-alero-chimenea.webp",
+    "thumbnail": "trabajos/lekeitio-alero-chimenea-small.webp",
+    "width": 901,
+    "height": 1600
+  },
+  {
+    "id": "lekeitio-revestimiento",
+    "title": "Detalle del revestimiento",
+    "caption": "Detalle de la zona donde falta parte del revestimiento bajo las tejas.",
+    "alt": "Detalle de la zona donde falta parte del revestimiento bajo las tejas.",
+    "tags": [
+      "tejados",
+      "canalones"
+    ],
+    "file": "trabajos/lekeitio-revestimiento.webp",
+    "thumbnail": "trabajos/lekeitio-revestimiento-small.webp",
+    "width": 901,
+    "height": 1600
+  },
+  {
+    "id": "lekeitio-canalon-lateral",
+    "title": "Canalón visto desde arriba",
+    "caption": "Vista del tramo del canalón junto al borde de la cubierta.",
+    "alt": "Vista del tramo del canalón junto al borde de la cubierta.",
+    "tags": [
+      "tejados",
+      "canalones"
+    ],
+    "file": "trabajos/lekeitio-canalon-lateral.webp",
+    "thumbnail": "trabajos/lekeitio-canalon-lateral-small.webp",
+    "width": 901,
+    "height": 1600
+  },
+  {
+    "id": "lekeitio-borde-tejado",
+    "title": "Borde de la cubierta",
+    "caption": "Vista longitudinal de las tejas que rematan el alero.",
+    "alt": "Vista longitudinal de las tejas que rematan el alero.",
+    "tags": [
+      "tejados",
+      "canalones"
+    ],
+    "file": "trabajos/lekeitio-borde-tejado.webp",
+    "thumbnail": "trabajos/lekeitio-borde-tejado-small.webp",
+    "width": 1600,
+    "height": 901
+  },
+  {
+    "id": "lekeitio-tramo-canalon",
+    "title": "Recorrido del canalón",
+    "caption": "El canalón fotografiado a lo largo del borde del tejado.",
+    "alt": "El canalón fotografiado a lo largo del borde del tejado.",
+    "tags": [
+      "tejados",
+      "canalones"
+    ],
+    "file": "trabajos/lekeitio-tramo-canalon.webp",
+    "thumbnail": "trabajos/lekeitio-tramo-canalon-small.webp",
+    "width": 901,
+    "height": 1600
   }
 ]
