@@ -284,5 +284,47 @@
     "thumbnail": "trabajos/humedad-techo-small.webp",
     "width": 1152,
     "height": 1536
+  },
+  {
+    "id": "ugao-restos-hojas",
+    "title": "Hojas y restos recogidos",
+    "caption": "Bolsas con hojas y restos vegetales retirados durante la limpieza de tejado y canalones en Ugao-Miraballes.",
+    "alt": "Bolsas con hojas y restos vegetales retirados durante la limpieza de tejado y canalones en Ugao-Miraballes.",
+    "tags": [
+      "tejados",
+      "canalones"
+    ],
+    "file": "trabajos/ugao-restos-hojas.webp",
+    "thumbnail": "trabajos/ugao-restos-hojas-small.webp",
+    "width": 901,
+    "height": 1600
+  },
+  {
+    "id": "ugao-cubierta-teja",
+    "title": "Vista de la cubierta",
+    "caption": "Vista de los faldones de teja y la cumbrera de la cubierta intervenida en Ugao-Miraballes.",
+    "alt": "Vista de los faldones de teja y la cumbrera de la cubierta intervenida en Ugao-Miraballes.",
+    "tags": [
+      "tejados",
+      "canalones"
+    ],
+    "file": "trabajos/ugao-cubierta-teja.webp",
+    "thumbnail": "trabajos/ugao-cubierta-teja-small.webp",
+    "width": 901,
+    "height": 1600
+  },
+  {
+    "id": "ugao-detalle-cubierta",
+    "title": "Detalle del borde de la cubierta",
+    "caption": "Detalle del encuentro y del borde de los faldones en la cubierta de Ugao-Miraballes.",
+    "alt": "Detalle del encuentro y del borde de los faldones en la cubierta de Ugao-Miraballes.",
+    "tags": [
+      "tejados",
+      "canalones"
+    ],
+    "file": "trabajos/ugao-detalle-cubierta.webp",
+    "thumbnail": "trabajos/ugao-detalle-cubierta-small.webp",
+    "width": 901,
+    "height": 1600
   }
 ]
