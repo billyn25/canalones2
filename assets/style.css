@@ -75,3 +75,13 @@
 .municipality-services .arrow-icon{width:14px;height:14px;margin-left:auto}
 @media(max-width:1000px){.municipality-service-list{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:650px){.heading-area{font-size:.55em}.zone-intro{font-size:14px}.municipality-service-list{grid-template-columns:1fr;gap:12px}.municipality-service-list .municipality-service{padding:18px}.municipality-service-list .municipality-services a{min-height:44px;font-size:14px}.municipality-service h3{font-size:24px}}
+
+/* Documented work links show the full preview before opening the case. */
+.work-cases .work-photo { max-width: 430px; }
+.work-cases .work-photo img { height: clamp(160px, 24vw, 245px); object-fit: contain; }
+.work-cases .work-photo h3 a:hover { text-decoration: underline; }
+@media (max-width: 560px) {
+ .work-cases .work-grid { grid-template-columns: 1fr; }
+ .work-cases .work-photo { max-width: none; }
+ .work-cases .work-photo img { height: 210px; }
+}

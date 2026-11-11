@@ -452,5 +452,31 @@
     "thumbnail": "trabajos/lekeitio-tramo-canalon-small.webp",
     "width": 901,
     "height": 1600
+  },
+  {
+    "id": "leon-salida-canalon",
+    "title": "Salida del canalón",
+    "caption": "Abertura circular con una pieza en cruz en el fondo del canalón del trabajo de León.",
+    "alt": "Abertura circular con una pieza en cruz en el fondo del canalón del trabajo de León.",
+    "tags": [
+      "canalones"
+    ],
+    "file": "trabajos/leon-salida-canalon.webp",
+    "thumbnail": "trabajos/leon-salida-canalon-small.webp",
+    "width": 1536,
+    "height": 865
+  },
+  {
+    "id": "leon-canalon-lateral",
+    "title": "Recorrido lateral del canalón",
+    "caption": "Vista desde arriba de un tramo del canalón junto al borde de teja y el paso lateral.",
+    "alt": "Vista desde arriba de un tramo del canalón junto al borde de teja y el paso lateral.",
+    "tags": [
+      "canalones"
+    ],
+    "file": "trabajos/leon-canalon-lateral.webp",
+    "thumbnail": "trabajos/leon-canalon-lateral-small.webp",
+    "width": 865,
+    "height": 1536
   }
 ]
