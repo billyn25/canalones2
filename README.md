@@ -11,7 +11,7 @@ python3 build.py
 python3 scripts/check_site.py
 ```
 
-`dist/` es el directorio que se publica. Contiene 89 páginas HTML: inicio, siete provincias, 72 municipios principales, cuatro servicios, una galería de trabajos, dos guías y dos páginas legales. El sitemap contiene las 87 páginas comerciales/editoriales. Las páginas legales llevan `noindex,follow` y siguen accesibles desde el pie.
+`dist/` es el directorio que se publica. Contiene 93 páginas de contenido HTML: inicio, contacto, siete provincias, 72 municipios principales, cuatro servicios, una galería, tres fichas de trabajos, dos guías y dos páginas legales. El sitemap contiene las 91 páginas comerciales/editoriales. Las páginas legales llevan `noindex,follow` y siguen accesibles desde el pie. Se genera además una página de error 404.
 
 ## Netlify
 
@@ -33,6 +33,8 @@ Fuentes, licencia y limitaciones de los datos en `data/SOURCES.md`. No se asigna
 
 El formulario construye el mensaje en el navegador y abre WhatsApp al pulsar el botón. No envía datos a una base de datos de la web ni almacena formularios en el dispositivo. El visitante revisa y envía desde WhatsApp. Teléfono y enlace directo funcionan sin JavaScript.
 
+`/contacto/` reúne teléfono, base en Bilbao, cobertura, datos para preparar la consulta, coordinación de viviendas/comunidades/naves y condiciones que se deben concretar antes de una visita. Está enlazada desde la navegación, la portada y el pie, y declara `ContactPage`. Su contenido no promete plazos de llegada, visitas gratuitas ni oficinas en otras provincias.
+
 ## Actualizar contenido
 
 - `config.json`: marca, dominio, teléfono y datos legales.
@@ -51,4 +53,4 @@ Producción en Netlify fija `INDEXABLE=true`. Si el entorno de producción inten
 
 ## Fotografías de trabajos
 
-`data/photos.json` describe las 21 fotografías aportadas por el titular. Se publican como trabajos y revisiones propios, con descripciones de los elementos visibles, sin asignar una localidad, fecha de ejecución, intervención completada o un antes/después que no se haya confirmado. Las imágenes figuran en inicio, servicios, provincias y principales; `/trabajos/` reúne las 21. Los originales aportados no se retocan: se generan copias WebP y miniaturas para la web. Los enlaces a fotografías funcionan sin JavaScript; la ampliación en diálogo añade cierre, navegación con botones y teclado y recuperación del foco.
+`data/photos.json` describe las 35 fotografías aportadas por el titular. Se publican como trabajos y revisiones propios, con descripciones de los elementos visibles, sin asignar una localidad, fecha de ejecución, intervención completada o un antes/después que no se haya confirmado. Las imágenes figuran en inicio, servicios, provincias y principales; `/trabajos/` reúne las 35. Los originales aportados no se retocan: se generan copias WebP y miniaturas para la web. Los enlaces a fotografías funcionan sin JavaScript; la ampliación en diálogo añade cierre, navegación con botones y teclado y recuperación del foco.

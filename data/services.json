@@ -23,6 +23,14 @@
       [
         "Qué incluye la consulta de presupuesto",
         "Describe los tramos que quieres limpiar y señala si dan a la calle, a un patio o a una terraza. La altura y el acceso ayudan a valorar el trabajo. Si también hay que revisar bajantes o reparar uniones, se concreta ese alcance antes de empezar."
+      ],
+      [
+        "Definir los tramos y la retirada de residuos",
+        "Al pedir la limpieza, distingue los canalones de la fachada principal, los patios y los porches o anexos. Un edificio puede tener varios recorridos que no se ven desde la calle. Conviene concretar qué tramos entran en el presupuesto, cómo se retirará la suciedad y qué salidas se revisarán. La limpieza de la bajante completa y la reparación de piezas deben quedar identificadas si también se necesitan."
+      ],
+      [
+        "Preparar el acceso en viviendas y comunidades",
+        "Indica si hay una terraza, un patio interior o un acceso comunitario que deba abrir otra persona. En edificios compartidos ayuda reunir los avisos de los vecinos y localizar en una fotografía cada tramo afectado. Así se puede valorar el conjunto sin confundir un rebose en la fachada con otro problema situado en el patio. No es necesario que nadie suba a medir el canalón."
       ]
     ],
     "checks": [
@@ -43,6 +51,14 @@
       [
         "¿Qué datos hacen falta si es una comunidad?",
         "Indica si el canalón da a la calle o a un patio, qué tramos presentan problemas y quién puede facilitar el acceso para la visita. Si hay humedad en una vivienda, dinos en qué planta y cuándo aparece."
+      ],
+      [
+        "¿Puedo consultar si no conozco los metros de canalón?",
+        "Sí. Describe las fachadas o zonas que quieres limpiar y envía fotografías generales desde el suelo. Una longitud aproximada puede orientar la consulta, pero no tienes que tomar medidas en altura: la extensión y el acceso se concretan al valorar la intervención."
+      ],
+      [
+        "¿Qué ocurre si al limpiar se observa una pieza dañada?",
+        "La limpieza y la reparación tienen alcances diferentes. Si se observa un tramo deteriorado, una unión abierta o un soporte que necesita atención, habrá que valorar esa actuación y concretarla antes de incorporarla al trabajo."
       ]
     ],
     "width": 901,
@@ -74,6 +90,14 @@
       [
         "Limpieza, reparación e impermeabilización",
         "Retirar suciedad no repara una teja rota ni sustituye una impermeabilización deteriorada. Si existen filtraciones, se revisan los indicios para separar el mantenimiento de los trabajos que necesita la entrada de agua."
+      ],
+      [
+        "Delimitar la superficie y los elementos de la cubierta",
+        "Para preparar la limpieza interesa distinguir el tejado principal de porches, cobertizos o ampliaciones. Indica también si hay ventanas de cubierta, chimeneas o placas solares cerca de las zonas con suciedad. Esa información ayuda a identificar qué superficie se va a tratar y a planificar el acceso. La consulta sobre el tejado no presupone trabajos en esos otros elementos; su alcance debe quedar definido por separado."
+      ],
+      [
+        "Organizar la intervención en una cubierta compartida",
+        "En una comunidad, facilita una persona de contacto que conozca el acceso a la cubierta y las zonas comunes implicadas. Si hay varias vertientes, señala en cuál se acumulan hojas o vegetación y si coincide con una zona donde se han observado humedades. Reunir esa información permite preparar la valoración de la limpieza y diferenciar cualquier revisión adicional que requiera el edificio."
       ]
     ],
     "checks": [
@@ -90,6 +114,14 @@
       [
         "¿Todos los tejados admiten agua a presión?",
         "No. El material, su fijación y su estado condicionan el método. Antes de decidirlo hay que valorar la cubierta."
+      ],
+      [
+        "¿Se puede valorar solo una parte del tejado?",
+        "Sí, puedes indicar la zona que te preocupa. Se revisará cómo se accede a ella y por dónde evacúa el agua para definir una intervención con sentido. El presupuesto debe identificar la superficie incluida y los desagües que también se vayan a limpiar."
+      ],
+      [
+        "¿Qué información sirve si el tejado no se ve desde la calle?",
+        "Envía las imágenes que ya tengas y describe el edificio y el acceso disponible. Un plano o fotografías de trabajos anteriores pueden orientar si dispones de ellos. No hace falta subir ni asomarse a una zona insegura para conseguir nuevas fotografías."
       ]
     ],
     "width": 901,
@@ -121,6 +153,14 @@
       [
         "Si está entrando agua ahora",
         "Llama e indica el municipio y lo que está ocurriendo para consultar disponibilidad. No subas a una cubierta mojada para buscar el origen. La intervención se organiza según las condiciones de acceso, la revisión y los medios necesarios."
+      ],
+      [
+        "Una revisión con los antecedentes del problema",
+        "Si la gotera ya se reparó, explica qué se hizo y si dejó de aparecer durante un tiempo o continuó desde el primer día. Las fotos anteriores y la ubicación de otras manchas ayudan a seguir la evolución. También conviene indicar si el problema se observa en una única habitación o en varias viviendas. Estos datos orientan la revisión; una fotografía del techo por sí sola no confirma el origen."
+      ],
+      [
+        "Qué debe quedar claro en la propuesta",
+        "La actuación debe identificar la zona de cubierta o el elemento que se va a reparar y explicar qué trabajo se propone. Una reparación del tejado y la recuperación de la pintura o del acabado interior son tareas distintas. Si necesitas ambas, indícalo en la consulta para concretar qué se puede valorar y evitar que una partida se dé por incluida en la otra."
       ]
     ],
     "checks": [
@@ -137,6 +177,14 @@
       [
         "¿Prometéis un plazo de llegada?",
         "La disponibilidad y el desplazamiento se confirman al contactar. El acceso y las condiciones de la cubierta también pueden condicionar cuándo se interviene."
+      ],
+      [
+        "¿Una gotera obliga a cambiar todo el tejado?",
+        "No puede decidirse solo por la mancha visible. La revisión permite valorar si el problema está localizado o si afecta a una zona más amplia. El alcance de la propuesta debe responder a lo observado y explicar qué elementos necesitan intervención."
+      ],
+      [
+        "¿Cómo preparo el aviso si afecta a una comunidad?",
+        "Reúne la ubicación de las viviendas afectadas, fotografías y las fechas en que se ha observado agua. Facilita también el contacto de quien pueda abrir las zonas comunes. Si alguna entrada de agua está activa, indícalo al llamar para diferenciarla de manchas antiguas."
       ]
     ],
     "width": 864,
@@ -168,6 +216,14 @@
       [
         "Bajantes y conexiones",
         "Una salida obstruida o una unión de bajante dañada puede mantener el problema aunque se limpie el canalón. Indica si hay registros accesibles y si el agua afecta a varias plantas para preparar la revisión del recorrido."
+      ],
+      [
+        "Una propuesta que identifique cada elemento",
+        "Al valorar una reparación conviene señalar el tramo, la unión, el soporte o la conexión de bajante que necesita atención. Si se estudia una sustitución parcial, también hay que revisar cómo se unirá con lo que permanece instalado. La propuesta debe aclarar qué piezas se incluyen y si hace falta limpiar previamente la zona, para que el presupuesto corresponda al trabajo que se va a realizar."
+      ],
+      [
+        "Coordinar los accesos y las zonas afectadas",
+        "No se prepara igual una reparación junto a una terraza accesible que otra en un patio interior de varias plantas. Indica qué puertas o espacios hay que abrir y si el recorrido pasa por zonas comunitarias. Cuando varios vecinos observan pérdidas, ayuda ubicar cada una en una fotografía general del edificio: pueden corresponder a puntos diferentes que conviene revisar en la misma valoración."
       ]
     ],
     "checks": [
@@ -184,6 +240,14 @@
       [
         "¿Podéis presupuestar una sustitución parcial?",
         "Sí, cuando la revisión indique que es una opción adecuada. Se detallan los elementos y tramos incluidos."
+      ],
+      [
+        "¿Puedo pedir una revisión sin saber de qué material es el canalón?",
+        "Sí. Envía una fotografía general y otra del punto afectado si puedes obtenerla sin acercarte a una zona peligrosa. No necesitas desmontar piezas ni identificar el material por tu cuenta. Su estado y las conexiones se valoran antes de proponer cómo repararlo."
+      ],
+      [
+        "¿La reparación del canalón incluye las marcas de humedad de la fachada?",
+        "Son actuaciones distintas. Resolver la pérdida de agua no equivale a reparar o pintar la superficie que se ha manchado. Si también necesitas valorar esos daños, coméntalo al consultar para que quede claro qué trabajo se estudia y qué partidas incluye el presupuesto."
       ]
     ],
     "width": 864,
